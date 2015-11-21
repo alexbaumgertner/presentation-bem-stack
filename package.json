@@ -1,0 +1,27 @@
+{
+  "name": "presentation-bem-stack",
+  "version": "1.0.0",
+  "description": "Presentation BEM-stack technologies",
+  "main": "index.js",
+  "dependencies": {
+    "shower-core": "^1.0.7",
+    "shower-ribbon": "^1.0.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexbaumgertner/presentation-bem-stack.git"
+  },
+  "keywords": [
+    "BEM"
+  ],
+  "author": "alex.baumgertner@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexbaumgertner/presentation-bem-stack/issues"
+  },
+  "homepage": "https://github.com/alexbaumgertner/presentation-bem-stack#readme"
+}
