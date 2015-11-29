@@ -26,7 +26,7 @@
                                 { elem: 'item', url: '/courses', title: 'Онлайн-курсы' },
                                 { elem: 'item', url: '/intensive', title: 'Интенсив' },
                                 { elem: 'item', url: '/pricing', title: 'Подписка' },
-                                { elem: 'item', url: 'Рейтинг', title: '/rating' }
+                                { elem: 'item', url: '/rating', title: 'Рейтинг' }
                             ]
                         }
                     ]

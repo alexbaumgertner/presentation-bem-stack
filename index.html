@@ -244,7 +244,71 @@
 </section>
 
 
+<section class="slide">
+    <div style="padding: 30px;">
+        <h2>Шаблонизация реальных данных</h2>
+        <h3>Пример menu, JSON:</h3>
+        <pre style="font-size: 0.5em;">
+        <code>
+            {
+              <span class="key">"data"</span>: {
+                <span class="value">"menu"</span>: {
+                  <span class="key">"title"</span>: <span class="value">"Обучение"</span>,
+                  <span class="key">"items"</span>: [
+                    { <span class="key">"title"</span>: <span class="value">"Карта обучения"</span> },
+                    { <span class="key">"url"</span>: <span class="value">"/courses"</span>,   <span class="key">"title"</span>:<span class="value">"Онлайн-курсы"</span> },
+                    { <span class="key">"url"</span>: <span class="value">"/intensive"</span>, <span class="key">"title"</span>:<span class="value">"Интенсив"</span> },
+                    { <span class="key">"url"</span>: <span class="value">"/pricing"</span>,   <span class="key">"title"</span>:<span class="value">"Подписка"</span> },
+                    { "<span class="key">url"</span>: <span class="value">"/rating"</span>,    <span class="key">"title"</span>:<span class="value">"Рейтинг"</span> }
+                  ]
+                }
+              }
+            }
+        </code>
+        </pre>
+    </div>
+</section>
 
+<section class="slide shout">
+    <div>
+        <h2 style="font-size: 3em;">DATA => BEMJSON => HTML</h2>
+    </div>
+</section>
+
+<section class="slide shout">
+    <div>
+        <h2>DATA => BEMJSON</h2>
+    </div>
+</section>
+
+
+<section class="slide">
+    <div>
+        <h2>BEMTREE</h2>
+        
+<code style="white-space: pre;">BEMTREE.apply(JSON).then(function(BEMJSON) {
+    BEMHTML.apply(BEMJSON);
+});</code>
+        
+    </div>
+</section>
+
+
+<section class="slide cover w">
+    <img src="img/menu.bemtree.png" alt="">
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Клиентский js: i-bem</h2>
+        <ul>
+            <li>веб-интерфейс в терминах блоков, элементов, модификаторов;</li>
+            <li>описание логики работы блока в декларативном стиле — как набор состояний;</li>
+            <li>легкая интеграция JavaScript-кода с BEMHTML- или BH-шаблонами и CSS в стиле БЭМ;</li>
+            <li>гибкое переопределение поведение библиотечных блоков.</li>
+        </ul>
+    </div>
+</section>
 
 <p class="badge"><a href="https://github.com/alexbaumgertner/presentation-bem-stack.git">Fork me on Github</a></p>
 <!--
