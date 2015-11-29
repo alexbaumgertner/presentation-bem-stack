@@ -3,7 +3,7 @@
     content: [
         {
             elem: 'col',
-            mods: [{ position: 'left' }],
+            mods: { position: 'left' },
             content: [
                 { block: 'logo' },
                 { block: 'social', providers: ['vk', 'facebook', 'twitter'] },
@@ -12,11 +12,11 @@
         },
         {
             elem: 'col',
-            mods: [{ position: 'right' }],
+            mods: { position: 'right' },
             content: [
                 {
                     block: 'menu',
-                    mods: [{ section: 'learning' }],
+                    mods: { section: 'learning' },
                     content: [
                         { elem: 'title', content: 'Обучение' },
                         {

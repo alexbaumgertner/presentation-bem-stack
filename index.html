@@ -16,6 +16,14 @@
     .gist .blob-code-inner {
         line-height: 1.1em !important;
     }
+    .key {
+        color: #7F0000;
+        font-weight: bold;
+    }
+    .value {
+        color: #008000;
+        font-weight: bold;
+    }
 </style>
 
 <body class="list">
@@ -51,7 +59,6 @@
         <ol>
             <li>BEMJSON</li>
             <li>BEMHTML</li>
-            <li>BH</li>
             <li>BEMTREE</li>
             <li>i-bem</li>
             <li>deps</li>
@@ -65,9 +72,9 @@
     </div>
 </section>
 
-<section class="slide cover">
+<section class="slide shout cover w">
     <div>
-        <h2>PSD<br>=><br> HTML + CSS</h2>
+        <h2>PSD => <br> HTML + CSS</h2>
     </div>
 </section>
 
@@ -150,9 +157,9 @@
             в которой выражается:</p>
         <ul style="line-height: 1.3em;">
             <li>структура страницы – порядок и вложенность блоков;</li>
-            <li>названия БЭМ-сущностей – имена блоков, элементов, модификаторов блока или элемента;</li>
-            <li>состояния БЭМ-сущностей – наличие логических модификаторов, значения модификаторов;</li>
-            <li>произвольные поля – вспомогательные данные (хеш-ключи, адреса публичных API и т.п.).</li>
+            <li>имена блоков, элементов, модификаторов блока или элемента;</li>
+            <li>аличие логических модификаторов, значения модификаторов;</li>
+            <li>вспомогательные данные</li>
         </ul>
         
         <p>Справочное руководство по BEMJSON: <a href="https://bem.info/technology/bemjson/">bem.info/technology/bemjson/</a></p>
@@ -177,49 +184,64 @@
 
 <section class="slide">
     <div style="padding: 0 0 0 20px; height: 600px;">
-        <img src="img/footer.bemjson.png" width="835" height="600" alt="">
-        <!--<script src="https://gist.github.com/alexbaumgertner/4b4c07c55bf05de6e6a3.js"></script>-->
+        <!--<img src="img/footer.bemjson.png" width="835" height="600" alt="">-->
+        <script src="https://gist.github.com/alexbaumgertner/4b4c07c55bf05de6e6a3.js"></script>
     </div>
 </section>
 
 
+<section class="slide">
+<div style="padding-left: 20px; width: 900px;">
+    <h2 style="margin-top: -40px;">Шаблон блока logo</h2>
+    <p style="margin: -20px 0 0 0;">Попробовать <a href="https://gist.github.com/alexbaumgertner/bfe4493a64ff17ace97d">gist</a></p>
+        <table>
+            <tr>
+                <th><div style="width: 150px;">BEMJSON</div></th>
+                <th>BEMHTML</th>
+                <th>HTML</th>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <code style="font-size: 0.5em;">
+                        {<span class="key">block</span>: <span class="value">'logo'</span>}
+                    </code>
+                </td>
+                <td style="vertical-align: top;">
+                    <img src="img/logo.bemhtml.png" style="margin-top: -2px;" width="432" alt="code">
+                </td>
+                <td style="vertical-align: top;">
+                    <img src="img/logo.sample.png" width="385">
+                </td>
+            </tr>
+        </table>
+</div> 
+</section>
+
+<!--
+<section class="slide cover w">
+    <img src="img/menu.demo.png" alt="">
+</section>
+-->
 
 
+<section class="slide cover">
+    <iframe style="width: 100%; min-height: 600px;" src="http://bem.github.io/bem-xjst/" frameborder="0"></iframe>
+</section>
 
 
+<section class="slide">
+    <div>
+        <h2>Попробовать online</h2>
+        
+        <p><a href="http://bem.github.io/bem-xjst/">http://bem.github.io/bem-xjst/</a></p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <ul>
+            <li><a href="https://gist.github.com/alexbaumgertner/bfe4493a64ff17ace97d">logo gist</a></li>
+            <li><a href="https://gist.github.com/alexbaumgertner/8d7c08fc29e877847e7d">menu gist</a></li>
+        </ul>
+        
+    </div>
+</section>
 
 
 
