@@ -18,11 +18,20 @@
     }
     .key {
         color: #7F0000;
-        font-weight: bold;
+        font-weight: bold
     }
     .value {
         color: #008000;
         font-weight: bold;
+    }
+    .keyword {
+        color: #000080;
+        font-weight: bold;
+    }
+    .const {
+        font-weight: bold;
+        font-size: 1.2em;
+        color: #660E7A;
     }
 </style>
 
@@ -244,6 +253,11 @@
     </div>
 </section>
 
+<section class="slide shout">
+    <div>
+        <h2>backend</h2>
+    </div>
+</section>
 
 <section class="slide">
     <div style="padding: 30px;">
@@ -285,7 +299,8 @@
 <section class="slide cover w">
     <div>
         <img src="img/bemtree.png" alt="">
-        <p><a href="http://www.slideshare.net/yandex/bemtree">http://www.slideshare.net/yandex/bemtree</a></p>
+        <p style="margin: 0;"><a href="http://www.slideshare.net/yandex/bemtree">http://www.slideshare.net/yandex/bemtree</a></p>
+        <p><a href="https://events.yandex.ru/lib/talks/1354/">https://events.yandex.ru/lib/talks/1354/</a></p>
     </div>
 </section>
 
@@ -294,9 +309,14 @@
     <div>
         <h2>BEMTREE</h2>
         
-<code style="white-space: pre;">BEMTREE.apply(JSON).then(function(BEMJSON) {
-    BEMHTML.apply(BEMJSON);
-});</code>
+<pre><code><span class="key">request</span>.get(
+    { url: '/index/json' }, 
+    <span class="keyword">function</span>(error, response, <mark>JSON</mark>) {
+        <span class="const">BEMTREE</span>.apply(<mark>JSON</mark>)
+               .then(<span class="keyword">function</span>(<mark>BEMJSON</mark>) {
+        var <mark class="important">html</mark> = <span class="const">BEMHTML</span>.apply(BEMJSON);
+    });
+});</code></pre>
         
     </div>
 </section>
