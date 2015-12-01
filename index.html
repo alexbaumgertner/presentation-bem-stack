@@ -7,15 +7,53 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen.css">
 </head>
+
+<script src="https://cdn.jsdelivr.net/g/ace@1.2.2(min/ace.js+min/mode-html.js+min/mode-css.js+min/mode-javascript.js+min/mode-json.js)"></script>
 <style>
     .gist_fullscreen > div {
         padding: 0 0 0 20px;
         height: 100%;
     }
+
+    .ace-full-screen {
+        padding: 0;
+    }
+
+    .ace-full-screen:after {
+        /*transform: scale(0.8);*/
+        right: 0;
+        top: 0;
+    }
+
+    .ace-full-screen h2 {
+        margin-bottom: 10px;;
+    }
+
+    .ace-full-screen > div {
+        padding: 0 0 0 1em;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    .sample-frame__viewport {
+       /* overflow-y: auto;*/
+    }
+
+    .sample-frame {
+        width: 90%;
+        height: 80%;
+        overflow-x: auto;
+        border: 5px solid lightgrey;
+        box-sizing: border-box;
+    }
+    
+    
     .gist .blob-num,
     .gist .blob-code-inner {
         line-height: 1.1em !important;
     }
+    
     .key {
         color: #7F0000;
         font-weight: bold
@@ -41,6 +79,8 @@
 
     <p>HTML Academy, 2015 Санкт-Петербург</p>
 </header>
+
+
 <section class="slide">
     <div>
         <p class="note" style="margin-top: 3em; line-height: 1.3em;">
@@ -50,6 +90,8 @@
             библиотек, фреймворков и вспомогательных инструментов.</p>
     </div>
 </section>
+
+
 <section class="slide">
     <div>
         <h2>Расскажу и покажу:</h2>
@@ -63,17 +105,20 @@
     </div>
 </section>
 
+
 <section class="slide shout">
     <div>
         <h2>HTML-верстка</h2>
     </div>
 </section>
 
+
 <section class="slide shout cover w">
     <div>
         <h2>PSD => <br> HTML + CSS</h2>
     </div>
 </section>
+
 
 <section class="slide">
     <div>
@@ -83,23 +128,34 @@
 </section>
 
 
-<section class="slide gist_fullscreen">
+<section class="slide ace-full-screen">
     <div>
+        
         <h2>footer.html</h2>
-        <img src="img/footer.html.current.png" height="495" alt="footer code">
+
+        <div
+                class="sample-frame"
+                data-img="img/footer.html.current.png"
+                data-src="common.blocks/footer/footer.current.samle.html">
+        </div>
     </div>
 </section>
 
 
+<section class="slide ace-full-screen">
+        <div style="padding: 100px 0 0 0;">
+            <img style="position: absolute; opacity: 0.8; width: 100%" 
+                 src="img/footer.current.png"  
+                 alt="current footer">
 
+            <div
+                    style="position: absolute; opacity: 0.8; width: 100%; height: 450px;"
 
-<section class="slide">
-    <div>
-        <div style="position: relative;">
-            <img style="position: absolute;" src="img/footer.html.current.png" width="850" alt="footer code">
-            <img style="position: absolute; opacity: 0.5" src="img/footer.current.png" width="850" height="424" alt="current footer">
+                    class="sample-frame"
+                    data-img="img/footer.html.current.png"
+                    data-src="common.blocks/footer/footer.current.samle.html">
+            </div>
         </div>
-    </div>
 </section>
 
 
@@ -112,6 +168,7 @@
     <img src="img/large-matrix-blu-ray7.jpg" width="900" alt="">
 </section>
 
+
 <section class="slide shout">
     <div>
         <h2>HTML – это Ассемблер</h2>
@@ -122,6 +179,7 @@
 <section class="slide shout cover">
     <img src="img/engineering-blueprint.medium.png"  alt="">
 </section>
+
 
 <section class="slide shout">
     <div>
@@ -146,6 +204,7 @@
     </div>
 </section>
 
+
 <section class="slide">
     <div>
         <h2>технологии БЭМ:</h2>
@@ -158,6 +217,7 @@
         </ol>
     </div>
 </section>
+
 
 <section class="slide">
     <div>
@@ -176,6 +236,7 @@
     </div>
 </section>
 
+
 <section class="slide">
     <div style="padding: 20px 0 0 20px; width: 900px; min-height: 600px;">
         <h2>Пример</h2>
@@ -192,10 +253,15 @@
 </section>
 
 
-<section class="slide">
-    <div style="padding: 0 0 0 20px; height: 600px;">
+<section class="slide ace-full-screen">
+    <div>
+        <h2>footer.example.bemjson.js</h2>
         <!--<img src="img/footer.bemjson.png" width="835" height="600" alt="">-->
-        <script src="https://gist.github.com/alexbaumgertner/4b4c07c55bf05de6e6a3.js"></script>
+        <div
+                class="sample-frame"
+                data-img="img/footer.html.current.png"
+                data-src="common.blocks/footer/footer.example.bemjson.js">
+        </div>
     </div>
 </section>
 
@@ -227,12 +293,6 @@
 </div> 
 </section>
 
-<!--
-<section class="slide cover w">
-    <img src="img/menu.demo.png" alt="">
-</section>
--->
-
 
 <section class="slide cover">
     <iframe style="width: 100%; min-height: 600px;" src="http://bem.github.io/bem-xjst/" frameborder="0"></iframe>
@@ -253,11 +313,13 @@
     </div>
 </section>
 
+
 <section class="slide shout">
     <div>
         <h2>backend</h2>
     </div>
 </section>
+
 
 <section class="slide">
     <div style="padding: 30px;">
@@ -284,17 +346,20 @@
     </div>
 </section>
 
+
 <section class="slide shout">
     <div>
         <h2 style="font-size: 3em;">DATA => BEMJSON => HTML</h2>
     </div>
 </section>
 
+
 <section class="slide shout">
     <div>
         <h2>DATA => BEMJSON</h2>
     </div>
 </section>
+
 
 <section class="slide cover w">
     <div>
@@ -326,6 +391,7 @@
     <img src="img/menu.bemtree.png" alt="">
 </section>
 
+
 <section class="slide">
     <div>
         <h2>Клиентский js: <a href="https://ru.bem.info/technology/i-bem/v2/i-bem-js/">i-bem</a></h2>
@@ -336,6 +402,7 @@
         </ul>
     </div>
 </section>
+
 
 <section class="slide">
     <div>
@@ -418,6 +485,35 @@
 <div class="progress">
     <div></div>
 </div>
+<script>
+    (function() {
+        var 
+                sampleNodes = document.querySelectorAll('.sample-frame'),
+                forEach = Array.prototype.forEach;
+        
+        // TODO: try http://prismjs.com/plugins/line-numbers/
+        
+        forEach.call(sampleNodes, function(sampleNode) {
+            var 
+                    src = sampleNode.dataset.src,
+                    fileType = src.split('.').pop(),
+                    editor = ace.edit(sampleNode);
+
+            if (fileType === 'js') {
+                fileType = 'javascript';
+            }
+            
+            fetch(sampleNode.dataset.src)
+                    .then(function(response) {return response.text()})
+                    .then(function(code) {
+                        editor.setValue(code);
+                        editor.getSession().setMode('ace/mode/' + fileType);
+                    })
+        });
+
+    }());
+</script>
+
 <script src="node_modules/shower-core/shower.min.js"></script>
 </body>
 </html>
