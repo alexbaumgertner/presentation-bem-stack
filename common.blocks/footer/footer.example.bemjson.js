@@ -3,7 +3,7 @@
     content: [
         {
             elem: 'col',
-            mods: { position: 'left' },
+            elemMods: { position: 'left' },
             content: [
                 { block: 'logo' },
                 { block: 'social', providers: ['vk', 'facebook', 'twitter'] },
@@ -12,7 +12,7 @@
         },
         {
             elem: 'col',
-            mods: { position: 'right' },
+            elemMods: { position: 'right' },
             content: [
                 {
                     block: 'menu',
