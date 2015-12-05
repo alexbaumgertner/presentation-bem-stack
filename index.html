@@ -328,6 +328,7 @@
                     <div
                             style="min-width: 480px; min-height: 350px;"
                             class="sample-frame"
+                            data-lang="bemhtml"
                             data-src="common.blocks/logo/logo.bemhtml.js">
                     </div>
                 </td>
@@ -530,34 +531,7 @@
 <div class="progress">
     <div></div>
 </div>
-<script>
-    (function() {
-        var 
-                sampleNodes = document.querySelectorAll('.sample-frame'),
-                forEach = Array.prototype.forEach;
-        
-        // TODO: try http://prismjs.com/plugins/line-numbers/
-        
-        forEach.call(sampleNodes, function(sampleNode) {
-            var 
-                    src = sampleNode.dataset.src,
-                    fileType = src.split('.').pop(),
-                    editor = ace.edit(sampleNode);
-
-            if (fileType === 'js') {
-                fileType = 'javascript';
-            }
-            
-            fetch(sampleNode.dataset.src)
-                    .then(function(response) {return response.text()})
-                    .then(function(code) {
-                        editor.getSession().setMode('ace/mode/' + fileType);
-                        editor.getSession().setValue(code);
-                    })
-        });
-
-    }());
-</script>
+<script src="js/index.js"></script>
 
 <script src="node_modules/shower-core/shower.min.js"></script>
 </body>
