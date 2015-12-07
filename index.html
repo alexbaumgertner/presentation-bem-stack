@@ -9,6 +9,7 @@
 </head>
 
 <script src="https://cdn.jsdelivr.net/g/ace@1.2.2(min/ace.js+min/mode-html.js+min/mode-css.js+min/mode-javascript.js+min/mode-json.js)"></script>
+<script src="https://yastatic.net/bem-components/latest/desktop/bem-components.js+bemhtml.js"></script>
 <style>
     .gist_fullscreen > div {
         padding: 0 0 0 20px;
@@ -70,6 +71,14 @@
         font-weight: bold;
         font-size: 1.2em;
         color: #660E7A;
+    }
+
+    .no-border,
+    .no-border tr,
+    .no-border th,
+    .no-border td {
+        border: none;
+        background: none !important;
     }
 </style>
 
@@ -190,7 +199,7 @@
 
 <section class="slide">
     <div>
-        <h2>Проектирование, <br> реализация <br> и сопровождение проекта <br> по методологии БЭМ</h2>
+        <h2>– Проектирование, <br> – реализация <br> – и сопровождение проекта <br><br><br> по методологии БЭМ</h2>
     </div>
 </section>
 
@@ -223,7 +232,7 @@
     <div>
         <h2>Построение прототипа в BEMJSON</h2>
         
-        <p>BEMJSON – структура данных (BEM + JSON <sup><a href="https://ru.wikipedia.org/wiki/JSON">wiki</a></sup>) 
+        <p>BEMJSON – структура данных 
             в которой выражается:</p>
         <ul style="line-height: 1.3em;">
             <li>структура страницы – порядок и вложенность блоков;</li>
@@ -237,16 +246,36 @@
 </section>
 
 
-<section class="slide">
-    <div style="padding: 20px 0 0 20px; width: 900px; min-height: 600px;">
+<section class="slide ace-full-screen">
+    <div>
+        <h2>BEMJON</h2>
+        <div class="sample-frame"
+             data-src="./examples/bemjson/simply.bemjson.js">
+        </div>
+    </div>
+</section>
+
+<section class="slide ace-full-screen">
+    <div>
+        <h2>BEMJON</h2>
+
+        <div class="sample-frame"
+             data-src="./examples/bemjson/normal.bemjson.js">
+        </div>
+    </div>
+</section>
+
+
+<section class="slide ace-full-screen">
+    <div>
         <h2>Пример</h2>
         <img src="img/footer.current.png" width="850" height="394" alt="current footer">
     </div>
 </section>
 
 
-<section class="slide">
-    <div style="padding: 20px 0 0 20px; width: 900px; min-height: 600px;">
+<section class="slide ace-full-screen">
+    <div>
         <h2>Пример</h2>
         <img src="img/footer.BEM.png" width="900" height="414" alt="current footer">
     </div>
@@ -255,47 +284,69 @@
 
 <section class="slide ace-full-screen">
     <div>
-        <h2>footer.example.bemjson.js</h2>
-        <!--<img src="img/footer.bemjson.png" width="835" height="600" alt="">-->
+        <h2>Пример</h2>
+        <table>
+            <tr>
+                <td><img src="img/footer.psd.example.png" alt="current footer"></td>
+                <td><img src="img/footer.psd.example.layers.png" alt="current footer"></td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+
+<section class="slide ace-full-screen">
+    <div>
+        <h2>footer.example_col_left.bemjson.js</h2>
         <div
                 class="sample-frame"
-                data-img="img/footer.html.current.png"
-                data-src="common.blocks/footer/footer.example.bemjson.js">
+                data-src="common.blocks/footer/footer.example_col_left.bemjson.js">
         </div>
     </div>
 </section>
 
 
-<section class="slide">
+<section class="slide ace-full-screen">
 <div style="padding-left: 20px; width: 900px;">
-    <h2 style="margin-top: -40px;">Шаблон блока logo</h2>
-    <p style="margin: -20px 0 0 0;">Попробовать <a href="https://gist.github.com/alexbaumgertner/bfe4493a64ff17ace97d">gist</a></p>
-        <table>
+    <h2>Шаблон блока logo</h2>
+    
+        <table class="no-border">
             <tr>
-                <th><div style="width: 150px;">BEMJSON</div></th>
+                <th>BEMJSON</th>
                 <th>BEMHTML</th>
-                <th>HTML</th>
             </tr>
             <tr>
                 <td style="vertical-align: top;">
-                    <code style="font-size: 0.5em;">
-                        {<span class="key">block</span>: <span class="value">'logo'</span>}
-                    </code>
+                    <div
+                            style="min-width: 180px;"
+                            class="sample-frame"
+                            data-src="common.blocks/logo/logo.example.bemjson.js">
+                    </div>
                 </td>
+                
                 <td style="vertical-align: top;">
-                    <img src="img/logo.bemhtml.png" style="margin-top: -2px;" width="432" alt="code">
+                    <div
+                            style="min-width: 480px; min-height: 350px;"
+                            class="sample-frame"
+                            data-lang="bemhtml"
+                            data-src="common.blocks/logo/logo.bemhtml.js">
+                    </div>
                 </td>
-                <td style="vertical-align: top;">
-                    <img src="img/logo.sample.png" width="385">
+            </tr>
+            <tr>
+                <td style="vertical-align: top;" colspan="3">
+                    <div style="margin-top: -30px;">
+                        <h3>HTML</h3>
+                        <div
+                                style="min-width: 440px; width: 100%; min-height: 100px;"
+                                class="sample-frame"
+                                data-src="common.blocks/logo/logo.sample.html">
+                        </div>
+                    </div>
                 </td>
             </tr>
         </table>
 </div> 
-</section>
-
-
-<section class="slide cover">
-    <iframe style="width: 100%; min-height: 600px;" src="http://bem.github.io/bem-xjst/" frameborder="0"></iframe>
 </section>
 
 
@@ -304,11 +355,6 @@
         <h2>Попробовать online</h2>
         
         <p><a href="http://bem.github.io/bem-xjst/">http://bem.github.io/bem-xjst/</a></p>
-
-        <ul>
-            <li><a href="https://gist.github.com/alexbaumgertner/bfe4493a64ff17ace97d">logo gist</a></li>
-            <li><a href="https://gist.github.com/alexbaumgertner/8d7c08fc29e877847e7d">menu gist</a></li>
-        </ul>
         
     </div>
 </section>
@@ -321,28 +367,49 @@
 </section>
 
 
-<section class="slide">
-    <div style="padding: 30px;">
-        <h2>Шаблонизация реальных данных</h2>
-        <h3>Пример menu, JSON:</h3>
-        <pre style="font-size: 0.5em;">
-        <code>
-            {
-              <span class="key">"data"</span>: {
-                <span class="value">"menu"</span>: {
-                  <span class="key">"title"</span>: <span class="value">"Обучение"</span>,
-                  <span class="key">"items"</span>: [
-                    { <span class="key">"title"</span>: <span class="value">"Карта обучения"</span> },
-                    { <span class="key">"url"</span>: <span class="value">"/courses"</span>,   <span class="key">"title"</span>:<span class="value">"Онлайн-курсы"</span> },
-                    { <span class="key">"url"</span>: <span class="value">"/intensive"</span>, <span class="key">"title"</span>:<span class="value">"Интенсив"</span> },
-                    { <span class="key">"url"</span>: <span class="value">"/pricing"</span>,   <span class="key">"title"</span>:<span class="value">"Подписка"</span> },
-                    { "<span class="key">url"</span>: <span class="value">"/rating"</span>,    <span class="key">"title"</span>:<span class="value">"Рейтинг"</span> }
-                  ]
-                }
-              }
-            }
-        </code>
-        </pre>
+<section class="slide shout">
+    <div>
+        <h2>Database</h2>
+    </div>
+</section>
+
+
+<section class="slide shout">
+    <div>
+        <h2>DATA</h2>
+    </div>
+</section>
+
+
+<section class="slide shout">
+    <div>
+        <h2>Model</h2>
+    </div>
+</section>
+
+
+<section class="slide shout">
+    <div>
+        <h2>JSON</h2>
+    </div>
+</section>
+
+
+<section class="slide ace-full-screen">
+    <div>
+        <h2>Menu</h2>
+        <div
+                style="min-width: 480px; min-height: 350px;"
+                class="sample-frame"
+                data-src="common.blocks/menu/menu.data.sample.json">
+        </div>
+    </div>
+</section>
+
+
+<section class="slide shout">
+    <div>
+        <h2>DATA</h2>
     </div>
 </section>
 
@@ -361,13 +428,26 @@
 </section>
 
 
-<section class="slide cover w">
+<section class="slide shout">
     <div>
-        <img src="img/bemtree.png" alt="">
-        <p style="margin: 0;"><a href="http://www.slideshare.net/yandex/bemtree">http://www.slideshare.net/yandex/bemtree</a></p>
-        <p><a href="https://events.yandex.ru/lib/talks/1354/">https://events.yandex.ru/lib/talks/1354/</a></p>
+        <h2>DATA + BEMTREE => BEMJSON</h2>
     </div>
 </section>
+
+<section class="slide ace-full-screen">
+    <div>
+        <iframe src="//www.slideshare.net/slideshow/embed_code/key/DOzSZKLDsxlSfw" width="700" height="500"
+                frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
+                style="border:1px solid #CCC; max-width: 100%;"
+                allowfullscreen></iframe>
+
+        <p>
+            <a href="https://events.yandex.ru/lib/talks/1354/">https://events.yandex.ru/lib/talks/1354/</a>
+        </p>
+    </div>
+</section>
+
+
 
 
 <section class="slide">
@@ -387,14 +467,110 @@
 </section>
 
 
-<section class="slide cover w">
-    <img src="img/menu.bemtree.png" alt="">
+<section class="slide ace-full-screen">
+    <div>
+        <table class="no-border">
+            <tr>
+                <th>JSON</th>
+                <th>BEMTREE</th>
+            </tr>
+            <tr>
+                <td>
+                    <div
+                            style="height: 300px; width: 400px;"
+                            class="sample-frame"
+                            data-src="common.blocks/menu/menu.data.sample.json">
+                    </div>
+                </td>
+                <td style="vertical-align: top;">
+                    <div
+                            style="height: 300px; width: 600px;"
+                            class="sample-frame"
+                            data-lang="bemhtml"
+                            data-src="common.blocks/menu/menu.bemtree.js">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>BEMHTML</th>
+                <th>HTML</th>
+            </tr>
+          
+            <tr>
+                <td>
+                    <div
+                            style="height: 200px; width: 400px;"
+                            class="sample-frame"
+                            data-src="common.blocks/menu/menu.bemhtml.js">
+                    </div>
+                </td>
+                <td>
+                    <div
+                            style="height: 200px;width: 600px;"
+                            class="sample-frame"
+                            data-src="common.blocks/menu/menu.sample.html">
+                    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+
+<section class="slide shout">
+    <div>
+        <h2>Двупроходная шаблонизация</h2>
+    </div>
+</section>
+
+
+<section class="slide ace-full-screen">
+    <div>
+        <iframe src="//www.slideshare.net/slideshow/embed_code/key/iwFVZpZkcKvDKE" width="700" height="500"
+                frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
+                style="border:1px solid #CCC;"
+                allowfullscreen></iframe>
+        <p>
+            <a href="https://events.yandex.ru/lib/talks/690/">https://events.yandex.ru/lib/talks/690/</a>
+        </p>
+    </div>
+</section>
+
+
+<section class="slide shout">
+    <div>
+        <h2>client</h2>
+    </div>
 </section>
 
 
 <section class="slide">
     <div>
-        <h2>Клиентский js: <a href="https://ru.bem.info/technology/i-bem/v2/i-bem-js/">i-bem</a></h2>
+        <h2>jQuery</h2>
+        
+<pre><code>
+<mark>if ($('.button'))</mark> {
+  $('.button').on('click', function() {
+    <mark>$(this).parent('.popup')</mark>.removeClass('.popup_open');
+      $('.some-value').text($(this).text());
+    });
+}
+</code></pre>
+    </div>
+</section>
+
+
+<section class="slide shout">
+    <div>
+        <h2>no way</h2>
+    </div>
+</section>
+
+
+<section class="slide">
+    <div>
+        <h2><a href="https://ru.bem.info/technology/i-bem/v2/i-bem-js/">i-bem js</a></h2>
         <ul>
             <li>веб-интерфейс в терминах: <strong>блок</strong>, <strong>элемент</strong>, <strong>модификатор</strong>;</li>
             <li>описание логики работы блока как <strong>набора состояний</strong>;</li>
@@ -404,24 +580,18 @@
 </section>
 
 
-<section class="slide">
+<section class="slide ace-full-screen">
     <div>
-        <h2>TODO:</h2>
+        <iframe src="//www.slideshare.net/slideshow/embed_code/key/8ToZr8HQgRTD0s" width="700" height="550"
+                frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
+                style="border:1px solid #CCC; max-width: 100%;"
+                allowfullscreen></iframe>
 
-        <ul>
-            <li>описание y-modules</li>
-            <li>работа с модификатрами</li>
-            <li>наследование: до- и пере- определения</li>
-            <li>BEM-события</li>
-            <li></li>
-        </ul>
-    </div>
-</section>
-
-
-<section class="slide shout">
-    <div>
-        <h2>Примеры проектов</h2>
+        <p>
+            <a href="http://clubs.ya.ru/yasubbotnik/replies.xml?item_no=751">
+                Сергей Бережной "Клиентский JavaScript в
+                БЭМ-терминах: от блока до библиотеки"</a>
+        </p>
     </div>
 </section>
 
@@ -429,11 +599,11 @@
 <section class="slide">
     <div>
         <h2>Примеры проектов</h2>
-        <p>TODO</p>
         <ul>
-            <li>https://github.com/alexbaumgertner/machine-bem-coder</li>
-            <li>https://github.com/bem-under-sailsjs</li>
-            <li></li>
+            <li><a href="https://github.com/bem/project-stub">canonical project-stub</a></li>
+            <li><a href="https://github.com/voischev/express-bemtree-project-stub">express-bemtree-project-stub</a></li>
+            <li><a href="https://github.com/tadatuta/bem-bemtree-static-project-stub">bem-bemtree-static-project-stub</a></li>
+            <li><a href="https://github.com/bem-under-sailsjs">BEM + Sails JS</a> (Rails-like MVC javascript framework)</li>
         </ul>
     </div>
 </section>
@@ -485,34 +655,7 @@
 <div class="progress">
     <div></div>
 </div>
-<script>
-    (function() {
-        var 
-                sampleNodes = document.querySelectorAll('.sample-frame'),
-                forEach = Array.prototype.forEach;
-        
-        // TODO: try http://prismjs.com/plugins/line-numbers/
-        
-        forEach.call(sampleNodes, function(sampleNode) {
-            var 
-                    src = sampleNode.dataset.src,
-                    fileType = src.split('.').pop(),
-                    editor = ace.edit(sampleNode);
-
-            if (fileType === 'js') {
-                fileType = 'javascript';
-            }
-            
-            fetch(sampleNode.dataset.src)
-                    .then(function(response) {return response.text()})
-                    .then(function(code) {
-                        editor.setValue(code);
-                        editor.getSession().setMode('ace/mode/' + fileType);
-                    })
-        });
-
-    }());
-</script>
+<script src="js/index.js"></script>
 
 <script src="shower/shower.min.js"></script>
 </body>

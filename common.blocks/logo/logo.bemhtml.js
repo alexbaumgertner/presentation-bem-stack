@@ -1,11 +1,9 @@
-// match `logo` block
 block('logo')(
-    // define `content`
     content()(function() {
         return [
             {
                 block: 'icon',
-                tag: 'i',
+                tag: 'span',
                 url: '/logo.png',
                 mix: [{ block: 'logo', elem: 'logo' }]
             },
@@ -15,6 +13,5 @@ block('logo')(
                 content: 'HTML Academy'
             }
         ];
-
     })
 );
