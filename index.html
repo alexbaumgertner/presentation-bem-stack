@@ -538,9 +538,39 @@
 </section>
 
 
+<section class="slide shout">
+    <div>
+        <h2>client</h2>
+    </div>
+</section>
+
+
 <section class="slide">
     <div>
-        <h2>Клиентский js: <a href="https://ru.bem.info/technology/i-bem/v2/i-bem-js/">i-bem</a></h2>
+        <h2>jQuery</h2>
+        
+<pre><code>
+<mark>if ($('.button'))</mark> {
+  $('.button').on('click', function() {
+    <mark>$(this).parent('.popup')</mark>.removeClass('.popup_open');
+      $('.some-value').text($(this).text());
+    });
+}
+</code></pre>
+    </div>
+</section>
+
+
+<section class="slide shout">
+    <div>
+        <h2>no way</h2>
+    </div>
+</section>
+
+
+<section class="slide">
+    <div>
+        <h2><a href="https://ru.bem.info/technology/i-bem/v2/i-bem-js/">i-bem js</a></h2>
         <ul>
             <li>веб-интерфейс в терминах: <strong>блок</strong>, <strong>элемент</strong>, <strong>модификатор</strong>;</li>
             <li>описание логики работы блока как <strong>набора состояний</strong>;</li>
@@ -550,24 +580,18 @@
 </section>
 
 
-<section class="slide">
+<section class="slide ace-full-screen">
     <div>
-        <h2>TODO:</h2>
+        <iframe src="//www.slideshare.net/slideshow/embed_code/key/8ToZr8HQgRTD0s" width="700" height="550"
+                frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
+                style="border:1px solid #CCC; max-width: 100%;"
+                allowfullscreen></iframe>
 
-        <ul>
-            <li>описание y-modules</li>
-            <li>работа с модификатрами</li>
-            <li>наследование: до- и пере- определения</li>
-            <li>BEM-события</li>
-            <li></li>
-        </ul>
-    </div>
-</section>
-
-
-<section class="slide shout">
-    <div>
-        <h2>Примеры проектов</h2>
+        <p>
+            <a href="http://clubs.ya.ru/yasubbotnik/replies.xml?item_no=751">
+                Сергей Бережной "Клиентский JavaScript в
+                БЭМ-терминах: от блока до библиотеки"</a>
+        </p>
     </div>
 </section>
 
@@ -575,11 +599,10 @@
 <section class="slide">
     <div>
         <h2>Примеры проектов</h2>
-        <p>TODO</p>
         <ul>
-            <li>https://github.com/alexbaumgertner/machine-bem-coder</li>
-            <li>https://github.com/bem-under-sailsjs</li>
-            <li></li>
+            <li><a href="https://github.com/bem/project-stub">canonical project-stub</a></li>
+            <li><a href="https://github.com/bem-under-sailsjs">BEM + Sails JS</a> (Rails-like MVC javascript framework)</li>
+            <li><a href="https://github.com/tadatuta/bem-bemtree-static-project-stub">bem-bemtree-static-project-stub</a></li>
         </ul>
     </div>
 </section>
