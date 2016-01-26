@@ -37,9 +37,12 @@
 }
 
 .ace-full-screen:after {
-    /*transform: scale(0.8);*/
+    width: 20px;
+    height: 20px;
     right: 0;
     top: 0;
+    font-size: 12px;
+    padding: 0;
 }
 
 .ace-full-screen h2 {
@@ -57,7 +60,7 @@
     /* overflow-y: auto;*/
 }
 
-.sample-frame {
+.ace-sample-frame {
     width: 90%;
     height: 80%;
     overflow-x: auto;
