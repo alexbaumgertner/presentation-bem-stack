@@ -1,9 +1,5 @@
 ({
-    block: 'footer',
-    content: [
-        {
-            elem: 'col',
-            elemMods: { position: 'left' },
+    /* ... */
             content: [
                 { block: 'logo' },
                 { 
@@ -12,10 +8,5 @@
                 },
                 { block: 'copyright' }
             ]
-        },
-        {
-            elem: 'col'
-            /* ... */
-        }
-    ]
+    /* ... */
 });
