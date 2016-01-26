@@ -5,166 +5,109 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=792, user-scalable=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+    <link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
-<script src="https://cdn.jsdelivr.net/g/ace@1.2.2(min/ace.js+min/mode-html.js+min/mode-css.js+min/mode-javascript.js+min/mode-json.js)"></script>
-<script src="https://yastatic.net/bem-components/latest/desktop/bem-components.js+bemhtml.js"></script>
-<style>
-    .gist_fullscreen > div {
-        padding: 0 0 0 20px;
-        height: 100%;
-    }
+<body class="shower list">
 
-    .ace-full-screen {
-        padding: 0;
-    }
-
-    .ace-full-screen:after {
-        /*transform: scale(0.8);*/
-        right: 0;
-        top: 0;
-    }
-
-    .ace-full-screen h2 {
-        margin-bottom: 10px;;
-    }
-
-    .ace-full-screen > div {
-        padding: 0 0 0 1em;
-        width: 100%;
-        height: 100%;
-        box-sizing: border-box;
-    }
-
-    .sample-frame__viewport {
-       /* overflow-y: auto;*/
-    }
-
-    .sample-frame {
-        width: 90%;
-        height: 80%;
-        overflow-x: auto;
-        border: 5px solid lightgrey;
-        box-sizing: border-box;
-    }
-    
-    
-    .gist .blob-num,
-    .gist .blob-code-inner {
-        line-height: 1.1em !important;
-    }
-    
-    .key {
-        color: #7F0000;
-        font-weight: bold
-    }
-    .value {
-        color: #008000;
-        font-weight: bold;
-    }
-    .keyword {
-        color: #000080;
-        font-weight: bold;
-    }
-    .const {
-        font-weight: bold;
-        font-size: 1.2em;
-        color: #660E7A;
-    }
-
-    .no-border,
-    .no-border tr,
-    .no-border th,
-    .no-border td {
-        border: none;
-        background: none !important;
-    }
-</style>
-
-<body class="list">
 <header class="caption">
-    <h1>Доклад "Полный стек технологий БЭМ"</h1>
+    <h1>Доклад «Полный стек технологий БЭМ»</h1>
 
-    <p>HTML Academy, 2015 Санкт-Петербург</p>
+    <p>HTML Academy, 2016 Санкт-Петербург</p>
 </header>
 
+<section class="slide slide_type_caption">
+    <h1>Полный стек <br>
+        технологий БЭМ</h1>
 
+    <p class="meeting-info">HTML Academy<br>
+        2016 Санкт-Петербург</p>
+</section>
+
+<!-- Quote about BEM from wikipedia -->
 <section class="slide">
-    <div>
-        <p class="note" style="margin-top: 3em; line-height: 1.3em;">
-            БЭМ (Блок-Элемент-Модификатор<sup style="line-height: 0.8em;">
-            <a href="https://ru.wikipedia.org/wiki/БЭМ">wiki</a></sup>)
-            — методология web-разработки, а также набор интерфейсных
-            библиотек, фреймворков и вспомогательных инструментов.</p>
-    </div>
+
+    <figure>
+        <blockquote>
+            <p>
+            <strong>БЭМ</strong> (Блок-Элемент-Модификатор) <br>
+            — методология web-разработки,<br>
+                а также набор интерфейсных библиотек, фреймворков и вспомогательных инструментов.
+            </p>
+        </blockquote>
+
+        <figcaption>
+            <a href="https://ru.wikipedia.org/wiki/%D0%91%D0%AD%D0%9C">ru.wikipedia.org/wiki/БЭМ</a>
+        </figcaption>
+
+    </figure>
+
 </section>
 
-
+<!-- Table of content -->
 <section class="slide">
-    <div>
-        <h2>Расскажу и покажу:</h2>
-        <ol>
-            <li>HTML-верстка</li>
-            <li>о технологиях БЭМ</li>
-            <li>примеры проектов</li>
-            <li>что стоит взять</li>
-            <li>каких ошибок стоит избегать</li>
-        </ol>
-    </div>
+
+    <h2>Расскажу:</h2>
+    <ol>
+        <li>HTML/CSS-верстка</li>
+        <li>БЭМ, основные технологии</li>
+        <li>Примеры проектов</li>
+        <li>Полезные концепции</li>
+        <li>Чего не хватает в БЭМ</li>
+        <li>Возможные ошибки</li>
+    </ol>
+
 </section>
 
-
-<section class="slide shout">
-    <div>
-        <h2>HTML-верстка</h2>
-    </div>
-</section>
-
-
-<section class="slide shout cover w">
-    <div>
-        <h2>PSD => <br> HTML + CSS</h2>
-    </div>
-</section>
-
-
+<!-- 1) HTML coding, header -->
 <section class="slide">
-    <div>
-        <h2>footer.psd</h2>
-        <img src="img/footer.current.png" width="850" height="394" alt="current footer">
-    </div>
+    <h2 class="shout shrink">HTML-верстка</h2>
+</section>
+
+<!-- 1) HTML coding, PSD => <br> HTML + CS  -->
+<section class="slide">
+    <h2 class="shout shrink">PSD => <br> HTML + CSS</h2>
+</section>
+
+<!-- 1) HTML coding, footer psd  -->
+<section class="slide">
+    <h2>footer.psd</h2>
+    <img src="img/footer.current.png"
+         width="850"
+         height="394"
+         alt="current footer">
 </section>
 
 
 <section class="slide ace-full-screen">
-    <div>
-        
-        <h2>footer.html</h2>
 
-        <div
-                class="sample-frame"
-                data-img="img/footer.html.current.png"
-                data-src="common.blocks/footer/footer.current.samle.html">
-        </div>
+
+    <h2>footer.html</h2>
+
+    <div
+            class="ace-sample-frame"
+            data-img="img/footer.html.current.png"
+            data-src="common.blocks/footer/footer.current.samle.html">
     </div>
+
 </section>
 
 
 <section class="slide ace-full-screen">
-        <div style="padding: 100px 0 0 0;">
-            <img style="position: absolute; opacity: 0.8; width: 100%" 
-                 src="img/footer.current.png"  
-                 alt="current footer">
 
-            <div
-                    style="position: absolute; opacity: 0.8; width: 100%; height: 450px;"
+    <img style="position: absolute; opacity: 0.8; width: 100%"
+         src="img/footer.current.png"
+         alt="current footer">
 
-                    class="sample-frame"
-                    data-img="img/footer.html.current.png"
-                    data-src="common.blocks/footer/footer.current.samle.html">
-            </div>
-        </div>
+    <div
+            style="position: absolute; opacity: 0.8; width: 100%; height: 450px;"
+
+            class="ace-sample-frame"
+            data-img="img/footer.html.current.png"
+            data-src="common.blocks/footer/footer.current.samle.html">
+    </div>
+
 </section>
 
 
@@ -179,264 +122,240 @@
 
 
 <section class="slide shout">
-    <div>
-        <h2>HTML – это Ассемблер</h2>
-    </div>
+    <h2>HTML – это Ассемблер</h2>
 </section>
 
 
 <section class="slide shout cover">
-    <img src="img/engineering-blueprint.medium.png"  alt="">
+    <img src="img/engineering-blueprint.medium.png" alt="">
 </section>
 
 
 <section class="slide shout">
-    <div>
-        <img src="img/BEM_logo.png" alt="BEM">
-    </div>
+
+    <img src="img/BEM_logo.png" alt="BEM">
+
 </section>
 
 
 <section class="slide">
-    <div>
-        <h2>– Проектирование, <br> – реализация <br> – и сопровождение проекта <br><br><br> по методологии БЭМ</h2>
-    </div>
+    <h2>– Проектирование, <br> – реализация <br> – и сопровождение проекта <br><br><br> по методологии БЭМ</h2>
 </section>
 
 
 <section class="slide">
-    <div>
-        <h2>Проектирование</h2>
-        <p>«Блок», «элемент» и «модификатор» — основные термины БЭМ. Это необходимые и достаточные понятия для описания
-            интерфейса любой сложности.
-        </p>
-    </div>
+    <h2>Проектирование</h2>
+    <p>«Блок», «элемент» и «модификатор» — основные термины БЭМ. Это необходимые и достаточные понятия для описания
+        интерфейса любой сложности.
+    </p>
 </section>
 
 
 <section class="slide">
-    <div>
-        <h2>технологии БЭМ:</h2>
-        <ol>
-            <li>BEMJSON</li>
-            <li>BEMHTML</li>
-            <li>BEMTREE</li>
-            <li>i-bem</li>
-            <li>deps</li>
-        </ol>
-    </div>
+    <h2>технологии БЭМ:</h2>
+    <ol>
+        <li>BEMJSON</li>
+        <li>BEMHTML</li>
+        <li>BEMTREE</li>
+        <li>i-bem</li>
+        <li>deps</li>
+    </ol>
 </section>
 
 
 <section class="slide">
-    <div>
-        <h2>Построение прототипа в BEMJSON</h2>
-        
-        <p>BEMJSON – структура данных 
-            в которой выражается:</p>
-        <ul style="line-height: 1.3em;">
-            <li>структура страницы – порядок и вложенность блоков;</li>
-            <li>имена блоков, элементов, модификаторов блока или элемента;</li>
-            <li>наличие логических модификаторов, значения модификаторов;</li>
-            <li>вспомогательные данные</li>
-        </ul>
-        
-        <p>Справочное руководство по BEMJSON: <a href="https://bem.info/technology/bemjson/">bem.info/technology/bemjson/</a></p>
+    <h2>Построение прототипа в BEMJSON</h2>
+
+    <p>BEMJSON – структура данных
+        в которой выражается:</p>
+    <ul style="line-height: 1.3em;">
+        <li>структура страницы – порядок и вложенность блоков;</li>
+        <li>имена блоков, элементов, модификаторов блока или элемента;</li>
+        <li>наличие логических модификаторов, значения модификаторов;</li>
+        <li>вспомогательные данные</li>
+    </ul>
+
+    <p>Справочное руководство по BEMJSON: <a
+            href="https://bem.info/technology/bemjson/">bem.info/technology/bemjson/</a></p>
+</section>
+
+
+<section class="slide ace-full-screen">
+    <h2>BEMJON</h2>
+    <div class="ace-sample-frame"
+         data-src="./examples/bemjson/simply.bemjson.js">
+    </div>
+</section>
+
+<section class="slide ace-full-screen">
+    <h2>BEMJON</h2>
+
+    <div class="ace-sample-frame"
+         data-src="./examples/bemjson/normal.bemjson.js">
     </div>
 </section>
 
 
 <section class="slide ace-full-screen">
-    <div>
-        <h2>BEMJON</h2>
-        <div class="sample-frame"
-             data-src="./examples/bemjson/simply.bemjson.js">
-        </div>
-    </div>
-</section>
-
-<section class="slide ace-full-screen">
-    <div>
-        <h2>BEMJON</h2>
-
-        <div class="sample-frame"
-             data-src="./examples/bemjson/normal.bemjson.js">
-        </div>
-    </div>
+    <h2>Пример</h2>
+    <img src="img/footer.current.png" width="850" height="394" alt="current footer">
 </section>
 
 
 <section class="slide ace-full-screen">
-    <div>
-        <h2>Пример</h2>
-        <img src="img/footer.current.png" width="850" height="394" alt="current footer">
-    </div>
+    <h2>Пример</h2>
+    <img src="img/footer.BEM.png" width="900" height="414" alt="current footer">
 </section>
 
 
 <section class="slide ace-full-screen">
-    <div>
-        <h2>Пример</h2>
-        <img src="img/footer.BEM.png" width="900" height="414" alt="current footer">
+    <h2>Пример</h2>
+    <table>
+        <tr>
+            <td><img src="img/footer.psd.example.png" alt="current footer"></td>
+            <td><img src="img/footer.psd.example.layers.png" alt="current footer"></td>
+        </tr>
+    </table>
+</section>
+
+
+<section class="slide ace-full-screen">
+    <h2>footer.example_col_left.bemjson.js</h2>
+    <div
+            class="ace-sample-frame"
+            data-src="common.blocks/footer/footer.example_col_left.bemjson.js">
     </div>
 </section>
 
 
 <section class="slide ace-full-screen">
-    <div>
-        <h2>Пример</h2>
-        <table>
-            <tr>
-                <td><img src="img/footer.psd.example.png" alt="current footer"></td>
-                <td><img src="img/footer.psd.example.layers.png" alt="current footer"></td>
-            </tr>
-        </table>
-    </div>
-</section>
-
-
-<section class="slide ace-full-screen">
-    <div>
-        <h2>footer.example_col_left.bemjson.js</h2>
-        <div
-                class="sample-frame"
-                data-src="common.blocks/footer/footer.example_col_left.bemjson.js">
-        </div>
-    </div>
-</section>
-
-
-<section class="slide ace-full-screen">
-<div style="padding-left: 20px; width: 900px;">
     <h2>Шаблон блока logo</h2>
-    
-        <table class="no-border">
-            <tr>
-                <th>BEMJSON</th>
-                <th>BEMHTML</th>
-            </tr>
-            <tr>
-                <td style="vertical-align: top;">
+
+    <table class="no-border">
+        <tr>
+            <th>BEMJSON</th>
+            <th>BEMHTML</th>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">
+                <div
+                        style="min-width: 180px;"
+                        class="ace-sample-frame"
+                        data-src="common.blocks/logo/logo.example.bemjson.js">
+                </div>
+            </td>
+
+            <td style="vertical-align: top;">
+                <div
+                        style="min-width: 480px; min-height: 350px;"
+                        class="ace-sample-frame"
+                        data-lang="bemhtml"
+                        data-src="common.blocks/logo/logo.bemhtml.js">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;" colspan="3">
+                <div style="margin-top: -30px;">
+                    <h3>HTML</h3>
                     <div
-                            style="min-width: 180px;"
-                            class="sample-frame"
-                            data-src="common.blocks/logo/logo.example.bemjson.js">
+                            style="min-width: 440px; width: 100%; min-height: 100px;"
+                            class="ace-sample-frame"
+                            data-src="common.blocks/logo/logo.sample.html">
                     </div>
-                </td>
-                
-                <td style="vertical-align: top;">
-                    <div
-                            style="min-width: 480px; min-height: 350px;"
-                            class="sample-frame"
-                            data-lang="bemhtml"
-                            data-src="common.blocks/logo/logo.bemhtml.js">
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td style="vertical-align: top;" colspan="3">
-                    <div style="margin-top: -30px;">
-                        <h3>HTML</h3>
-                        <div
-                                style="min-width: 440px; width: 100%; min-height: 100px;"
-                                class="sample-frame"
-                                data-src="common.blocks/logo/logo.sample.html">
-                        </div>
-                    </div>
-                </td>
-            </tr>
-        </table>
-</div> 
+                </div>
+            </td>
+        </tr>
+    </table>
 </section>
 
 
 <section class="slide">
-    <div>
-        <h2>Попробовать online</h2>
-        
-        <p><a href="http://bem.github.io/bem-xjst/">http://bem.github.io/bem-xjst/</a></p>
-        
-    </div>
+
+    <h2>Попробовать online</h2>
+
+    <p><a href="http://bem.github.io/bem-xjst/">http://bem.github.io/bem-xjst/</a></p>
+
 </section>
 
 
 <section class="slide shout">
-    <div>
-        <h2>backend</h2>
-    </div>
+
+    <h2>backend</h2>
+
 </section>
 
 
 <section class="slide shout">
-    <div>
-        <h2>Database</h2>
-    </div>
+
+    <h2>Database</h2>
+
 </section>
 
 
 <section class="slide shout">
-    <div>
-        <h2>DATA</h2>
-    </div>
+
+    <h2>DATA</h2>
+
 </section>
 
 
 <section class="slide shout">
-    <div>
+
         <h2>Model</h2>
-    </div>
+
 </section>
 
 
 <section class="slide shout">
-    <div>
+
         <h2>JSON</h2>
-    </div>
+
 </section>
 
 
 <section class="slide ace-full-screen">
-    <div>
+
         <h2>Menu</h2>
         <div
                 style="min-width: 480px; min-height: 350px;"
-                class="sample-frame"
+                class="ace-sample-frame"
                 data-src="common.blocks/menu/menu.data.sample.json">
         </div>
-    </div>
+
 </section>
 
 
 <section class="slide shout">
-    <div>
+
         <h2>DATA</h2>
-    </div>
+
 </section>
 
 
 <section class="slide shout">
-    <div>
+
         <h2 style="font-size: 3em;">DATA => BEMJSON => HTML</h2>
-    </div>
+
 </section>
 
 
 <section class="slide shout">
-    <div>
+
         <h2>DATA => BEMJSON</h2>
-    </div>
+
 </section>
 
 
 <section class="slide shout">
-    <div>
+
         <h2>DATA + BEMTREE => BEMJSON</h2>
-    </div>
+
 </section>
 
 <section class="slide ace-full-screen">
-    <div>
-        <iframe src="//www.slideshare.net/slideshow/embed_code/key/DOzSZKLDsxlSfw" width="700" height="500"
+
+        <iframe src="www.slideshare.net/slideshow/embed_code/key/DOzSZKLDsxlSfw" width="700" height="500"
                 frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
                 style="border:1px solid #CCC; max-width: 100%;"
                 allowfullscreen></iframe>
@@ -444,31 +363,38 @@
         <p>
             <a href="https://events.yandex.ru/lib/talks/1354/">https://events.yandex.ru/lib/talks/1354/</a>
         </p>
-    </div>
+
 </section>
 
 
-
-
 <section class="slide">
-    <div>
+
         <h2>BEMTREE</h2>
         
-<pre><code><span class="key">request</span>.get(
-    { url: '/index/json' }, 
-    <span class="keyword">function</span>(error, response, <mark>JSON</mark>) {
-        <span class="const">BEMTREE</span>.apply(<mark>JSON</mark>)
-               .then(<span class="keyword">function</span>(<mark>BEMJSON</mark>) {
-        var <mark class="important">html</mark> = <span class="const">BEMHTML</span>.apply(BEMJSON);
+<pre><code>
+    <span class="key">request</span>.get(
+    { url: '/index/json' },
+    <span class="keyword">function</span>(error, response,
+    <mark>JSON</mark>
+    ) {
+    <span class="const">BEMTREE</span>.apply(
+    <mark>JSON</mark>
+    )
+    .then(<span class="keyword">function</span>(
+    <mark>BEMJSON</mark>
+    ) {
+    var
+    <mark class="important">html</mark>
+    = <span class="const">BEMHTML</span>.apply(BEMJSON);
     });
-});</code></pre>
-        
-    </div>
+    });
+</code></pre>
+
 </section>
 
 
 <section class="slide ace-full-screen">
-    <div>
+
         <table class="no-border">
             <tr>
                 <th>JSON</th>
@@ -478,14 +404,14 @@
                 <td>
                     <div
                             style="height: 300px; width: 400px;"
-                            class="sample-frame"
+                            class="ace-sample-frame"
                             data-src="common.blocks/menu/menu.data.sample.json">
                     </div>
                 </td>
                 <td style="vertical-align: top;">
                     <div
                             style="height: 300px; width: 600px;"
-                            class="sample-frame"
+                            class="ace-sample-frame"
                             data-lang="bemhtml"
                             data-src="common.blocks/menu/menu.bemtree.js">
                     </div>
@@ -495,38 +421,37 @@
                 <th>BEMHTML</th>
                 <th>HTML</th>
             </tr>
-          
+
             <tr>
                 <td>
                     <div
                             style="height: 200px; width: 400px;"
-                            class="sample-frame"
+                            class="ace-sample-frame"
                             data-src="common.blocks/menu/menu.bemhtml.js">
                     </div>
                 </td>
                 <td>
                     <div
                             style="height: 200px;width: 600px;"
-                            class="sample-frame"
+                            class="ace-sample-frame"
                             data-src="common.blocks/menu/menu.sample.html">
                     </div>
 
                 </td>
             </tr>
         </table>
-    </div>
 </section>
 
 
 <section class="slide shout">
-    <div>
+
         <h2>Двупроходная шаблонизация</h2>
-    </div>
+
 </section>
 
 
 <section class="slide ace-full-screen">
-    <div>
+
         <iframe src="//www.slideshare.net/slideshow/embed_code/key/iwFVZpZkcKvDKE" width="700" height="500"
                 frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
                 style="border:1px solid #CCC;"
@@ -534,54 +459,57 @@
         <p>
             <a href="https://events.yandex.ru/lib/talks/690/">https://events.yandex.ru/lib/talks/690/</a>
         </p>
-    </div>
+
 </section>
 
 
 <section class="slide shout">
-    <div>
+
         <h2>client</h2>
-    </div>
+
 </section>
 
 
 <section class="slide">
-    <div>
+
         <h2>jQuery</h2>
         
 <pre><code>
-<mark>if ($('.button'))</mark> {
-  $('.button').on('click', function() {
-    <mark>$(this).parent('.popup')</mark>.removeClass('.popup_open');
-      $('.some-value').text($(this).text());
+    <mark>if ($('.button'))</mark>
+    {
+    $('.button').on('click', function() {
+    <mark>$(this).parent('.popup')</mark>
+    .removeClass('.popup_open');
+    $('.some-value').text($(this).text());
     });
-}
+    }
 </code></pre>
-    </div>
+
 </section>
 
 
 <section class="slide shout">
-    <div>
+
         <h2>no way</h2>
-    </div>
+
 </section>
 
 
 <section class="slide">
-    <div>
+
         <h2><a href="https://ru.bem.info/technology/i-bem/v2/i-bem-js/">i-bem js</a></h2>
         <ul>
-            <li>веб-интерфейс в терминах: <strong>блок</strong>, <strong>элемент</strong>, <strong>модификатор</strong>;</li>
+            <li>веб-интерфейс в терминах: <strong>блок</strong>, <strong>элемент</strong>, <strong>модификатор</strong>;
+            </li>
             <li>описание логики работы блока как <strong>набора состояний</strong>;</li>
             <li>гибкое <strong>переопределение</strong> поведение библиотечных блоков.</li>
         </ul>
-    </div>
+
 </section>
 
 
 <section class="slide ace-full-screen">
-    <div>
+
         <iframe src="//www.slideshare.net/slideshow/embed_code/key/8ToZr8HQgRTD0s" width="700" height="550"
                 frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
                 style="border:1px solid #CCC; max-width: 100%;"
@@ -592,39 +520,41 @@
                 Сергей Бережной "Клиентский JavaScript в
                 БЭМ-терминах: от блока до библиотеки"</a>
         </p>
-    </div>
+
 </section>
 
 
 <section class="slide">
-    <div>
+
         <h2>Примеры проектов</h2>
         <ul>
             <li><a href="https://github.com/bem/project-stub">canonical project-stub</a></li>
-            <li><a href="https://github.com/voischev/express-bemtree-project-stub">express-bemtree-project-stub</a></li>
-            <li><a href="https://github.com/tadatuta/bem-bemtree-static-project-stub">bem-bemtree-static-project-stub</a></li>
-            <li><a href="https://github.com/bem-under-sailsjs">BEM + Sails JS</a> (Rails-like MVC javascript framework)</li>
+            <li><a href="https://github.com/voischev/express-bem-stack">express-bem-stack</a></li>
+            <li>
+                <a href="https://github.com/tadatuta/bem-bemtree-static-project-stub">bem-bemtree-static-project-stub</a>
+            </li>
+            <li><a href="https://github.com/bem-under-sailsjs">BEM + Sails JS</a> (Rails-like MVC javascript framework)
+            </li>
         </ul>
-    </div>
+
 </section>
 
 
 <section class="slide shout">
-    <div>
+
         <h2>Вопросы?</h2>
-    </div>
+
 </section>
 
 
 <section class="slide shout">
-    <div>
+
         <h2>Спасибо!</h2>
-    </div>
+
 </section>
 
 
 <section class="slide">
-    <div style="padding-top: 50px;">
         <h2>Контактная информация</h2>
 
         <img src="img/alexbaumgertner.jpg" width="300" style="float: right;" alt="alexbaumgertner">
@@ -635,7 +565,7 @@
             <li><a href="https://twitter.com/alexbaumgertner">twitter.com/alexbaumgertner</a></li>
             <li><a href="mailto:alex.baumgertner@gmail.com">alex.baumgertner@gmail.com</a></li>
         </ul>
-        
+
         <h2>BEM</h2>
         <ul>
             <li><a href="https://bem.info/">bem.info/</a></li>
@@ -643,7 +573,7 @@
             <li><a href="https://tech.yandex.ru/bem/">tech.yandex.ru/bem/</a></li>
             <li><a href="https://twitter.com/bem_ru">twitter.com/bem_ru</a></li>
         </ul>
-    </div>
+
 </section>
 
 
@@ -655,8 +585,7 @@
 <div class="progress">
     <div></div>
 </div>
-<script src="js/index.js"></script>
-
 <script src="shower/shower.min.js"></script>
+<script src="js/ace-sample-frame.js"></script>
 </body>
 </html>
