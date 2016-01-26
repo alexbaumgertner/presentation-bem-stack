@@ -1,0 +1,100 @@
+.slide_type_caption
+{
+    color: #3C3D40;
+    text-align: center;
+    text-shadow: 0 1px 0 #8D8E90;
+}
+
+.slide_type_caption h1
+{
+    font-size: 3.4em;
+    line-height: 1.6em;
+}
+
+.slide_type_caption .meeting-info
+{
+    font-size: .8em;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+}
+
+.slide_type_caption:after
+{
+    display: none;
+}
+
+
+.gist_fullscreen > div {
+    padding: 0 0 0 20px;
+    height: 100%;
+}
+
+.ace-full-screen {
+    padding: 0;
+}
+
+.ace-full-screen:after {
+    /*transform: scale(0.8);*/
+    right: 0;
+    top: 0;
+}
+
+.ace-full-screen h2 {
+    margin-bottom: 10px;;
+}
+
+.ace-full-screen > div {
+    padding: 0 0 0 1em;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.sample-frame__viewport {
+    /* overflow-y: auto;*/
+}
+
+.sample-frame {
+    width: 90%;
+    height: 80%;
+    overflow-x: auto;
+    border: 5px solid lightgrey;
+    box-sizing: border-box;
+}
+
+.gist .blob-num,
+.gist .blob-code-inner {
+    line-height: 1.1em !important;
+}
+
+.key {
+    color: #7F0000;
+    font-weight: bold
+}
+
+.value {
+    color: #008000;
+    font-weight: bold;
+}
+
+.keyword {
+    color: #000080;
+    font-weight: bold;
+}
+
+.const {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #660E7A;
+}
+
+.no-border,
+.no-border tr,
+.no-border th,
+.no-border td {
+    border: none;
+    background: none !important;
+}
