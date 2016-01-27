@@ -1,21 +1,18 @@
 ({
-    block: 'footer',
-    content: [
-        {
-            elem: 'col',
-            elemMods: { position: 'left' },
             content: [
-                { block: 'logo' },
+                {
+                    block: 'logo',
+                    text: 'HTML Academy'
+                },
+
                 { 
                     block: 'social', 
                     providers: ['vk', 'facebook', 'twitter'] 
                 },
-                { block: 'copyright' }
+
+
+
+
+                { block: 'copyright'}
             ]
-        },
-        {
-            elem: 'col'
-            /* ... */
-        }
-    ]
 });
