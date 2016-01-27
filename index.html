@@ -12,17 +12,14 @@
 <body class="shower list">
 
 <header class="caption">
-    <h1>Доклад «Полный стек технологий БЭМ»</h1>
+    <h1>«Полный стек технологий БЭМ»</h1>
 
     <p>HTML Academy, 2016 Санкт-Петербург</p>
 </header>
 
 <section class="slide slide_type_caption">
-    <h1>Полный стек <br>
+    <h1 class="shout shrink">Полный стек <br>
         технологий БЭМ</h1>
-
-    <p class="meeting-info">HTML Academy<br>
-        2016 Санкт-Петербург</p>
 </section>
 
 <!-- Quote about BEM from wikipedia -->
@@ -48,14 +45,11 @@
 <!-- Table of content -->
 <section class="slide">
 
-    <h2>Расскажу:</h2>
+    <h2>Что будет:</h2>
     <ol>
-        <li>HTML/CSS-верстка</li>
-        <li>БЭМ, основные технологии</li>
+        <li>HTML/CSS без БЭМ</li>
+        <li>БЭМ, основные концепции и технологии</li>
         <li>Примеры проектов</li>
-        <li>Полезные концепции</li>
-        <li>Чего не хватает в БЭМ</li>
-        <li>Возможные ошибки</li>
     </ol>
 
 </section>
@@ -65,9 +59,9 @@
     <h2 class="shout shrink">HTML-верстка</h2>
 </section>
 
-<!-- 1) HTML coding, PSD => <br> HTML + CS  -->
+<!-- 1) HTML coding, PSD => HTML + CSS  -->
 <section class="slide">
-    <h2 class="shout shrink">PSD => <br> HTML + CSS</h2>
+    <h2 class="shout shrink">PSD <br> => <br> HTML + CSS</h2>
 </section>
 
 <!-- 1) HTML coding, footer psd  -->
@@ -86,6 +80,14 @@
             data-img="img/footer.html.current.png"
             data-src="common.blocks/footer/footer.current.samle.html">
     </div>
+</section>
+
+<!-- 1) HTML coding, footer psd  -->
+<section class="slide">
+    <img src="img/footer.current.png"
+         class="cover"
+         alt="current footer">
+    <h2>footer.psd</h2>
 </section>
 
 <!-- 1) HTML coding, assembler.png -->
@@ -291,51 +293,39 @@
     </div>
 </section>
 
-
+<!-- 2) BEM: Try online  -->
 <section class="slide">
-
     <h2>Попробовать online</h2>
-
     <p><a href="http://bem.github.io/bem-xjst/">http://bem.github.io/bem-xjst/</a></p>
-
 </section>
 
-
+<!-- 2) BEM: backend -->
 <section class="slide">
-
     <h2 class="shout shrink">backend</h2>
-
 </section>
 
-
+<!-- 2) BEM: frontend-vs-backend.jpg -->
 <section class="slide">
-
-    <h2 class="shout shrink">Database</h2>
-
+    <img src="img/frontend-vs-backend.jpg" alt="frontend-vs-backend" class="cover">
 </section>
 
-
+<!-- 2) BEM: service-scheme.jpg -->
 <section class="slide">
+    <img src="img/service-scheme.jpg" alt="service-scheme" class="cover">
+</section>
 
+<!-- 2) BEM: data -->
+<section class="slide">
+    <img src="img/data-model-normalized.png" alt="service-scheme" class="cover">
     <h2 class="shout shrink">DATA</h2>
-
 </section>
 
-
+<!-- 2) BEM: JSON -->
 <section class="slide">
-
-    <h2 class="shout shrink">Model</h2>
-
+    <img src="img/1400961685_json.png" alt="JSON" class="cover">
 </section>
 
-
-<section class="slide">
-
-    <h2 class="shout shrink">JSON</h2>
-
-</section>
-
-
+<!-- 2) BEM: menu.data.sample.json -->
 <section class="slide ace ace_screen_full">
 
     <h2>Menu</h2>
@@ -347,35 +337,23 @@
 
 </section>
 
-
+<!-- 2) BEM: DATA => BEMJSON => HTML -->
 <section class="slide">
-
-    <h2 class="shout shrink">DATA</h2>
-
+    <h2 class="shout shrink" style="font-size: 120px;">DATA <br> => <br> BEMJSON <br> => <br> HTML</h2>
 </section>
 
-
+<!-- 2) BEM: DATA => BEMJSON -->
 <section class="slide">
-
-    <h2 class="shout shrink">DATA => <br> BEMJSON => <br> HTML</h2>
-
-</section>
-
-
-<section class="slide">
-
     <h2 class="shout shrink">DATA => BEMJSON</h2>
-
 </section>
 
-
+<!-- 2) BEM: DATA + BEMTREE => BEMJSON -->
 <section class="slide">
-
     <h2 class="shout shrink">DATA + BEMTREE => <br> BEMJSON</h2>
-
 </section>
 
-<section class="slide">
+<!-- 2) BEM: https://events.yandex.ru/lib/talks/1354/ -->
+<section class="slide slideshare">
 
     <iframe src="//www.slideshare.net/slideshow/embed_code/key/DOzSZKLDsxlSfw" width="700" height="500"
             frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
@@ -472,16 +450,11 @@
 </section>
 
 
-<section class="slide ace ace_screen_full">
-
+<section class="slide slideshare">
     <iframe src="//www.slideshare.net/slideshow/embed_code/key/iwFVZpZkcKvDKE" width="700" height="500"
             frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
             style="border:1px solid #CCC;"
             allowfullscreen></iframe>
-    <p>
-        <a href="https://events.yandex.ru/lib/talks/690/">https://events.yandex.ru/lib/talks/690/</a>
-    </p>
-
 </section>
 
 
@@ -536,19 +509,12 @@
 </section>
 
 
-<section class="slide ace ace_screen_full">
-
+<section class="slide slideshare">
     <iframe src="//www.slideshare.net/slideshow/embed_code/key/8ToZr8HQgRTD0s" width="700" height="550"
             frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
             style="border:1px solid #CCC; max-width: 100%;"
-            allowfullscreen></iframe>
-
-    <p>
-        <a href="http://clubs.ya.ru/yasubbotnik/replies.xml?item_no=751">
-            Сергей Бережной "Клиентский JavaScript в
-            БЭМ-терминах: от блока до библиотеки"</a>
-    </p>
-
+            allowfullscreen>
+    </iframe>
 </section>
 
 
@@ -569,24 +535,11 @@
 
 
 <section class="slide">
-
-    <h2>Вопросы?</h2>
-
+    <h2 class="shout">Вопросы?</h2>
 </section>
 
-
 <section class="slide">
-
-    <h2>Спасибо!</h2>
-
-</section>
-
-
-<section class="slide">
-    <h2>Контактная информация</h2>
-
     <img src="img/alexbaumgertner.jpg" width="300" style="float: right;" alt="alexbaumgertner">
-
 
     <ul>
         <li><a href="https://github.com/alexbaumgertner">github.com/alexbaumgertner</a></li>
@@ -604,6 +557,11 @@
 
 </section>
 
+<section class="slide">
+
+    <h2 class="shout">Спасибо!</h2>
+
+</section>
 
 <p class="badge"><a href="https://github.com/alexbaumgertner/presentation-bem-stack.git">Fork me on Github</a></p>
 <!--
