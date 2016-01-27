@@ -3,7 +3,6 @@ block('logo')(
         return [
             {
                 block: 'icon',
-                tag: 'span',
                 url: '/logo.png',
                 mix: [{ block: 'logo', elem: 'logo' }]
             },
@@ -13,5 +12,14 @@ block('logo')(
                 content: 'HTML Academy'
             }
         ];
+    })
+);
+
+block('icon')(
+    tag()('img'),
+    attrs()(function() {
+        return {
+            src: this.ctx.url
+        };
     })
 );

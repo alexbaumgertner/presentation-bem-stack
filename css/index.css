@@ -54,6 +54,11 @@
     padding: 0;
 }
 
+.ace h2
+{
+    margin-bottom: .2em;
+}
+
 .ace_screen_full {
 
 }
