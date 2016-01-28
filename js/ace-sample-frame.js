@@ -116,12 +116,18 @@
     .then(function(result) {
       var doc = global.document;
 
-      var BEMHTML = global['BEMHTML_BARE'];
+      var BEMHTML = global['BEMHTML'];
       var bemjsonNode = doc.getElementById('logo-example-bemjson');
       var bemhtmlNode = doc.getElementById('logo-bemhtml');
       var htmlNode = doc.getElementById('logo-sample-html');
 
-      console.log("bemjsonNode.aceInit: ", bemjsonNode.aceEditor);
+      var bemjsonExample = bemjsonNode.aceEditor.getSession().getValue();
+      var bemhtmlExample = bemhtmlNode.aceEditor.getSession().getValue();
+
+      console.log("bemhtmlExample: ", bemhtmlExample);
+
+      console.log("BEMHTML: ", BEMHTML);
+
     });
 
 }(window));
