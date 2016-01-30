@@ -1933,19 +1933,8 @@ var BEMHTML;
     return exports;
   };
 
-  var defineAsGlobal = true;
-  if (typeof module === "object" && typeof module.exports === "object") {
-    exports["BEMHTML"] = buildBemXjst({}, {});
-    defineAsGlobal = false;
-  }
-  if (typeof modules === "object") {
-    modules.define("BEMHTML", [], function(provide) {
-      provide(buildBemXjst({}, {}));
-    });
-    defineAsGlobal = false;
-  }
-  if (defineAsGlobal) {
-    BEMHTML = buildBemXjst({}, {});
-    global["BEMHTML"] = BEMHTML;
-  }
+  BEMHTML = buildBemXjst({}, {});
+  global["BEMHTML"] = BEMHTML;
+  global["buildBemXjst"] = buildBemXjst;
+
 })(this);

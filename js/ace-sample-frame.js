@@ -117,6 +117,8 @@
       var doc = global.document;
 
       var BEMHTML = global['BEMHTML'];
+      var buildBemXjst = global['buildBemXjst'];
+
       var bemjsonNode = doc.getElementById('logo-example-bemjson');
       var bemhtmlNode = doc.getElementById('logo-bemhtml');
       var htmlNode = doc.getElementById('logo-sample-html');
@@ -124,9 +126,8 @@
       var bemjsonExample = bemjsonNode.aceEditor.getSession().getValue();
       var bemhtmlExample = bemhtmlNode.aceEditor.getSession().getValue();
 
-      console.log("bemhtmlExample: ", bemhtmlExample);
+      console.log("buildBemXjst: ", buildBemXjst);
 
-      console.log("BEMHTML: ", BEMHTML);
 
     });
 
