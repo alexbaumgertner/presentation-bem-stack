@@ -1,13 +1,22 @@
-// with javascript code
+// javascript code in BEMJSON
 ({
-    content: (function () {
-        var items = ['main', 'about', 'contacts'];
-
+    block: 'menu',
+    content: (function (items) {
+        // Прототип меню
         return items.map(function(item) {
             return {
-                block: item,
-                content: 'content of ' + item
+                block: 'menu',
+                elem: 'item',
+                content: {
+                    // https://github.com/bem/bem-components/blob/v2/common.blocks/link/link.ru.md
+                    block: 'link',
+                    url: '/' + item,
+                    content: item
+                }
             };
         });
-    }())
+    }(
+      // Пункты меню
+      ['main', 'about', 'contacts']
+    ))
 });
