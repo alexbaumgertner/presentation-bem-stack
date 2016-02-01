@@ -160,11 +160,12 @@
 <section class="slide">
     <h2>Технологии БЭМ:</h2>
     <ol>
-        <li>BEMJSON</li>
-        <li>BEMHTML (BH)</li>
-        <li>BEMTREE</li>
-        <li>i-bem</li>
-        <li>deps</li>
+        <li><a href="https://ru.bem.info/technology/bemjson/">BEMJSON</a></li>
+        <li><a href="https://ru.bem.info/technology/bemtree/">BEMTREE</a></li>
+        <li><a href="https://ru.bem.info/technology/bemhtml/">BEMHTML</a>
+            (<a href="https://ru.bem.info/technology/bh/">BH</a>)</li>
+        <li><a href="https://ru.bem.info/technology/i-bem/">i-bem</a></li>
+        <li><a href="https://ru.bem.info/technology/deps/">deps</a></li>
     </ol>
 </section>
 
@@ -261,7 +262,7 @@
 </section>
 
 <!--  2) BEM: footer left col Techs  -->
-<section class="slide ace">
+<section class="slide ace ace_screen_full">
     <h2>Шаблон блока logo</h2>
 
     <div class="columns">
@@ -370,29 +371,13 @@
 </section>
 
 
-<section class="slide">
-
-    <h2>BEMTREE</h2>
-        
-<pre><code>
-    <span class="key">request</span>.get(
-    { url: '/index/json' },
-    <span class="keyword">function</span>(error, response,
-    <mark>JSON</mark>
-    ) {
-    <span class="const">BEMTREE</span>.apply(
-    <mark>JSON</mark>
-    )
-    .then(<span class="keyword">function</span>(
-    <mark>BEMJSON</mark>
-    ) {
-    var
-    <mark class="important">html</mark>
-    = <span class="const">BEMHTML</span>.apply(BEMJSON);
-    });
-    });
-</code></pre>
-
+<!-- BEMTREE usage  -->
+<section class="slide ace ace_screen_full">
+    <h2>BEMTREE usage</h2>
+    <div
+            class="ace-sample-frame ace-sample-frame_screen_full"
+            data-src="examples/bemtree/usage.js">
+    </div>
 </section>
 
 
@@ -472,18 +457,13 @@
     <h2 class="shout shrink">jQuery</h2>
 </section>
 
-<section class="slide">
-<pre><code>
-    <mark>if ($('.button'))</mark>
-    {
-    $('.button').on('click', function() {
-    <mark>$(this).parent('.popup')</mark>
-    .removeClass('.popup_open');
-    $('.some-value').text($(this).text());
-    });
-    }
-</code></pre>
-
+<!-- jQuery button  -->
+<section class="slide ace ace_screen_full">
+    <h2>jQuery button</h2>
+    <div
+            class="ace-sample-frame ace-sample-frame_screen_full"
+            data-src="examples/jquery/button.js">
+    </div>
 </section>
 
 <section class="slide">
@@ -499,16 +479,39 @@
     </h2>
 </section>
 
+<!-- i-bem.js -->
 <section class="slide">
 
-    <h2><a href="https://ru.bem.info/technology/i-bem/v2/i-bem-js/">i-bem js</a></h2>
+    <h2><a href="https://ru.bem.info/technology/i-bem/v2/i-bem-js/">i-bem.js</a></h2>
     <ul>
-        <li>веб-интерфейс в терминах: <strong>блок</strong>, <strong>элемент</strong>, <strong>модификатор</strong>;
+        <li>веб-интерфейс в терминах:
+            <strong>блок</strong>,
+            <strong>элемент</strong>,
+            <strong>модификатор</strong>;
         </li>
-        <li>описание логики работы блока как <strong>набора состояний</strong>;</li>
-        <li>гибкое <strong>переопределение</strong> поведение библиотечных блоков.</li>
+        <li class="next">описание логики работы блока как <strong>набора состояний</strong>;</li>
+        <li class="next">гибкое <strong>переопределение</strong> поведение библиотечных блоков.</li>
     </ul>
 
+</section>
+
+<!-- i-bem declaration.js -->
+<section class="slide ace ace_screen_full">
+    <h2>i-bem.js: блок</h2>
+    <div
+            style="width: 100%; height: 520px;"
+            class="ace-sample-frame"
+            data-src="examples/ibem/declaration.js">
+    </div>
+</section>
+
+<section class="slide ace ace_screen_full">
+    <h2>i-bem.js: блок</h2>
+    <div
+            style="width: 100%; height: 520px;"
+            class="ace-sample-frame"
+            data-src="examples/ibem/example_simple.js">
+    </div>
 </section>
 
 
@@ -520,6 +523,74 @@
     </iframe>
 </section>
 
+<section class="slide">
+    <h2 class="shout">Библиотеки БЭМ</h2>
+</section>
+
+<section class="slide">
+    <h2 class="shout">Ядро: <a href="https://github.com/bem/bem-core/">bem-core</a></h2>
+</section>
+
+<section class="slide">
+    <h2>bem-core</h2>
+    <ul>
+        <li><a href="https://ru.bem.info/libs/bem-core/v2.8.0/desktop/i-bem/">i-bem</a>:
+            Блок-хелпер, позволяющий создавать другие блоки.
+            <ul>
+                <li class="next"><a href="https://github.com/bem/bem-core/blob/v2/common.blocks/i-bem/i-bem.bemtree">i-bem.bemtree</a></li>
+                <li class="next"><a href="https://github.com/bem/bem-core/blob/v2/common.blocks/i-bem/i-bem.bemhtml">i-bem.bemhtml</a></li>
+                <li class="next"><a href="https://github.com/bem/bem-core/blob/v2/common.blocks/i-bem/__dom/i-bem__dom.js">i-bem__dom.js</a>: JavaScript-фреймворк для БЭМ</li>
+            </ul>
+        </li>
+        <li class="next"><a href="https://github.com/bem/bem-core/tree/v2/common.blocks/inherit">inherit</a>: механизмы
+            для объявления и наследования классов.</li>
+        <li class="next"><a href="https://github.com/bem/bem-core/tree/v2/common.blocks/page">page</a>:
+            шаблоны, создающие набор HTML-элементов верхнего уровня страницы: <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>,<code>
+                &lt;body&gt;</code>, подключение к странице CSS, JS, элементов <code>&lt;meta&gt;</code>и указание заголовка
+            <code>&lt;title&gt;</code>.
+        </li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2 class="shout">компоненты: <br> <a href="https://github.com/bem/bem-components">bem-components</a></h2>
+</section>
+
+<section class="slide slideshare">
+    <iframe src="https://ru.bem.info/__example/bem-components/v2.4.0/desktop.pages/showcase/showcase.html" frameborder="0"></iframe>
+</section>
+
+<section class="slide">
+    <h2>bem-components</h2>
+    <ul>
+        <li class="next">
+            <a href="https://ru.bem.info/libs/bem-components/v2.4.0/desktop/link/">link</a>:
+            ссылка (<a href="https://ru.bem.info/libs/bem-components/v2.4.0/desktop/link/#pseudo">pseudo</a>,
+            <a href="https://ru.bem.info/libs/bem-components/v2.4.0/desktop/link/#disabled">disabled</a>)
+        </li>
+        <li class="next"><a href="https://ru.bem.info/libs/bem-components/v2.4.0/desktop/button/
+        ">button</a>: кнопка</li>
+        <li class="next"><a href="https://ru.bem.info/libs/bem-components/v2.4.0/desktop/input/">input</a></li>
+        <li class="next"><a href="https://github.com/bem/bem-components/tree/v2.4.0/design/common.blocks/page">page</a>: дизайн страницы</li>
+    </ul>
+</section>
+
+<section class="slide slideshare">
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/Wtvlth-mG7U?rel=0" frameborder="0"
+            allowfullscreen></iframe>
+</section>
+
+<section class="slide">
+    <h2 class="shout">open source</h2>
+</section>
+
+<section class="slide">
+    <img
+            class="cover"
+            src="img/bem-components_waffle.png"
+            alt="scrum board">
+    <h2 class="shout"><a href="https://waffle.io/bem/bem-components">scrum board</a></h2>
+</section>
 
 <section class="slide">
 
