@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=792, user-scalable=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+    <link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen-16x10.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 
@@ -18,7 +18,7 @@
 </header>
 
 <section class="slide slide_type_caption">
-    <h1 class="shout ">Полный стек <br>
+    <h1 class="shout shrink">Полный стек <br>
         технологий БЭМ</h1>
 </section>
 
@@ -28,18 +28,11 @@
     <figure>
         <blockquote>
             <p>
-                <strong>БЭМ</strong> (Блок-Элемент-Модификатор) — методология web-разработки,<br>
-                а также набор:
+                <strong>БЭМ</strong> (Блок-Элемент-Модификатор) <br>
+                — методология web-разработки,<br>
+                а также набор интерфейсных библиотек, фреймворков и вспомогательных инструментов.
             </p>
-            <ul>
-                <li>интерфейсных библиотек</li>
-                <li>фреймворков</li>
-                <li>и вспомогательных инструментов.</li>
-            </ul>
         </blockquote>
-
-        <br>
-        <br>
 
         <figcaption>
             <a href="https://ru.wikipedia.org/wiki/%D0%91%D0%AD%D0%9C">ru.wikipedia.org/wiki/БЭМ</a>
@@ -51,28 +44,19 @@
 
 <!-- Table of content -->
 <section class="slide">
-    <h2 class="shout">Не только CSS</h2>
-</section>
 
-<section class="slide">
-    <h2 class="shout">Методология!</h2>
-</section>
+    <h2>Что будет:</h2>
+    <ol>
+        <li>HTML/CSS без БЭМ</li>
+        <li>БЭМ, основные концепции и технологии</li>
+        <li>Примеры проектов</li>
+    </ol>
 
-<section class="slide">
-    <h2 class="shout shrink">Библиотеки!</h2>
-</section>
-
-<section class="slide">
-    <h2 class="shout shrink">Инстументы!</h2>
-</section>
-
-<section class="slide">
-    <h2 class="shout">А если без маркетинга?</h2>
 </section>
 
 <!-- 1) HTML coding, header -->
 <section class="slide">
-    <h2 class="shout">Начнем с HTML</h2>
+    <h2 class="shout shrink">HTML-верстка</h2>
 </section>
 
 <!-- 1) HTML coding, PSD => HTML + CSS  -->
@@ -81,18 +65,29 @@
 </section>
 
 <!-- 1) HTML coding, footer psd  -->
-<section class="slide ace ace_screen_full">
-    <img src="img/barbershop/layer-naming.png"
+<section class="slide">
+    <img src="img/footer.current.png"
          class="cover"
          alt="current footer">
-    <h2>barbershop.psd</h2>
+    <h2>footer.psd</h2>
 </section>
 
 <!-- 1) HTML coding, footer html  -->
 <section class="slide ace ace_screen_full">
-    <img src="img/barbershop/view-source-products.png"
+    <h2>footer.html</h2>
+    <div
+            class="ace-sample-frame ace-sample-frame_screen_full"
+            data-img="img/footer.html.current.png"
+            data-src="common.blocks/footer/footer.current.samle.html">
+    </div>
+</section>
+
+<!-- 1) HTML coding, footer psd  -->
+<section class="slide">
+    <img src="img/footer.current.png"
          class="cover"
          alt="current footer">
+    <h2>footer.psd</h2>
 </section>
 
 <!-- 1) HTML coding, assembler.png -->
@@ -150,58 +145,167 @@
 
 <!-- 2) BEM into text -->
 <section class="slide">
-    <h2 class="shout">Методология!</h2>
+    <h2>– Проектирование, <br> – реализация <br> – и сопровождение проекта <br><br><br> по методологии БЭМ</h2>
 </section>
 
 <!-- 2) BEM projection -->
-<section class="slide" style="text-align: center;">
-    <h2 style="font-size: 6em!important;">Блок</h2>
-    <h2 style="font-size: 5em!important;">__элемент</h2>
-    <h2 style="font-size: 4em!important;">_модификатор</h2>
+<section class="slide">
+    <h2>Проектирование</h2>
+    <p>«Блок», «элемент» и «модификатор» — основные термины БЭМ. Это необходимые и достаточные понятия для описания
+        интерфейса любой сложности.
+    </p>
+</section>
+
+<!-- 2) BEM techs -->
+<section class="slide">
+    <h2>Технологии БЭМ:</h2>
+    <ol>
+        <li><a href="https://ru.bem.info/technology/bemjson/">BEMJSON</a></li>
+        <li><a href="https://ru.bem.info/technology/bemtree/">BEMTREE</a></li>
+        <li><a href="https://ru.bem.info/technology/bemhtml/">BEMHTML</a>
+            (<a href="https://ru.bem.info/technology/bh/">BH</a>)</li>
+        <li><a href="https://ru.bem.info/technology/i-bem/">i-bem</a></li>
+        <li><a href="https://ru.bem.info/technology/deps/">deps</a></li>
+    </ol>
+</section>
+
+<!-- 2) BEM Building a prototype BEMJSON -->
+<section class="slide">
+    <h2>Построение прототипа в BEMJSON</h2>
+
+    <p>BEMJSON – тип данных в котором выражается:</p>
+    <ul>
+        <li>структура страницы – порядок и вложенность блоков;</li>
+        <li>имена блоков, элементов, модификаторов блока или элемента;</li>
+        <li>наличие логических модификаторов, значения модификаторов;</li>
+        <li>вспомогательные данные</li>
+    </ul>
+
+    <p>Справочное руководство по BEMJSON:
+        <a href="https://bem.info/technology/bemjson/">bem.info/technology/bemjson/</a></p>
+</section>
+
+<!-- 2) BEM: BEMJSON simple example -->
+<section class="slide ace ace_screen_full">
+    <h2>BEMJSON, пример</h2>
+    <div class="ace-sample-frame"
+         data-src="./examples/bemjson/simply.bemjson.js">
+    </div>
+</section>
+
+<!-- 2) BEM: BEMJSON normal example -->
+<section class="slide ace ace_screen_full">
+    <h2>BEMJSON, пример</h2>
+
+    <div class="ace-sample-frame"
+         data-src="./examples/bemjson/normal.bemjson.js">
+    </div>
+</section>
+
+<!-- 2) BEM: BEMJSON with js example -->
+<section class="slide ace ace_screen_full">
+    <h2>BEMJSON, пример</h2>
+
+    <div class="ace-sample-frame"
+         data-src="./examples/bemjson/with-js.bemjson.js">
+    </div>
 </section>
 
 <section class="slide">
-    <img src="img/barbershop/product-list.png"
+    <h2 class="cover">BEMJSON === javascript</h2>
+</section>
+
+
+<!--  2) BEM: footer psd  -->
+<section class="slide">
+    <img src="img/footer.current.png"
          class="cover"
          alt="current footer">
+    <h2>footer.psd</h2>
 </section>
 
+<!--  2) BEM: footer BEM png  -->
 <section class="slide">
-    <img src="img/barbershop/layer-naming.png"
-         class="cover"
-         alt="current footer">
+    <img
+            class="cover"
+            src="img/footer.BEM.png"
+            alt="current footer">
+    <h2>Пример</h2>
 </section>
 
+<!--  2) BEM: footer left col  -->
 <section class="slide">
-    <img src="img/barbershop/layer-bad-example.png"
-         class="cover"
-         alt="current footer">
+    <img
+            class="cover"
+            src="img/footer.psd.example.png"
+            alt="current footer">
+    <h2>Пример</h2>
 </section>
 
-<section class="slide">
-    <img src="img/hangers.jpg"
-         class="cover"
-         alt="current footer">
+<!--  2) BEM: footer left col png + BEMJSON  -->
+<section class="slide ace ace_screen_full">
+    <h2>footer.example_col_left.bemjson.js</h2>
+    <div class="columns">
+        <div class="columns__col columns__col_position_left" style="width: 350px;">
+            <img
+                    src="img/footer.psd.example.png" width="350"
+                    alt="current footer">
+        </div>
+        <div class="columns__col columns__col_position_right">
+            <div
+                    style="width: 750px; height: 364px;"
+                    class="ace-sample-frame"
+                    data-src="common.blocks/footer/footer.example_col_left.bemjson.js">
+            </div>
+        </div>
+    </div>
 </section>
 
-<section class="slide">
-    <h2 class="shout">Методология!</h2>
+<!--  2) BEM: footer left col Techs  -->
+<section class="slide ace ace_screen_full">
+    <h2>Шаблон блока logo</h2>
+
+    <div class="columns">
+        <div class="columns__col columns__col_position_left" style="width: 220px;">
+            <h3>BEMJSON => </h3>
+            <div
+                    style="width: 100%; height: 520px;"
+                    class="ace-sample-frame"
+                    id="logo-example-bemjson"
+                    data-src="common.blocks/logo/logo.example.bemjson.js">
+            </div>
+        </div>
+        <div class="columns__col columns__col_position_center" style="width: 410px;">
+            <h3>BEMHTML =></h3>
+            <div
+                    style="width: 100%; height: 520px;"
+                    class="ace-sample-frame"
+                    id="logo-bemhtml"
+                    data-lang="bemhtml"
+                    data-src="common.blocks/logo/logo.bemhtml.js">
+            </div>
+        </div>
+        <div class="columns__col columns__col_position_right" style="width: 370px;">
+            <h3>HTML</h3>
+            <div
+                    style="width: 100%; height: 520px;"
+                    class="ace-sample-frame"
+                    id="logo-sample-html"
+                    data-src="common.blocks/logo/logo.sample.html">
+            </div>
+        </div>
+    </div>
 </section>
 
+<!-- 2) BEM: Try online  -->
 <section class="slide">
-    <img src="img/barbershop/product-blocks.png"
-         class="cover"
-         alt="current footer">
+    <h2>Попробовать online</h2>
+    <p><a href="http://bem.github.io/bem-xjst/">http://bem.github.io/bem-xjst/</a></p>
 </section>
 
+<!-- 2) BEM: backend -->
 <section class="slide">
-    <img src="img/barbershop/layer-good-example.png"
-         class="cover"
-         alt="">
-</section>
-
-<section class="slide">
-    <h2 class="shout">Начнем с бекенда</h2>
+    <h2 class="shout shrink">backend</h2>
 </section>
 
 <!-- 2) BEM: frontend-vs-backend.jpg -->
@@ -209,37 +313,42 @@
     <img src="img/frontend-vs-backend.jpg" alt="frontend-vs-backend" class="cover">
 </section>
 
+<!-- 2) BEM: service-scheme.jpg -->
+<section class="slide">
+    <img src="img/service-scheme.jpg" alt="service-scheme" class="cover">
+</section>
+
+<!-- 2) BEM: data -->
+<section class="slide">
+    <img src="img/data-model-normalized.png" alt="service-scheme" class="cover">
+    <h2 class="shout shrink">DATA</h2>
+</section>
+
 <!-- 2) BEM: JSON -->
 <section class="slide">
     <img src="img/1400961685_json.png" alt="JSON" class="cover">
 </section>
 
+<!-- 2) BEM: menu.data.sample.json -->
 <section class="slide ace ace_screen_full">
+
+    <h2>Menu</h2>
     <div
-            class="ace-sample-frame ace-sample-frame_screen_full"
-            data-fontsize="26"
-            data-src="https://rawgit.com/bem-under-sailsjs/barbershop-bem-sails/feature/code-style-presentation/frontend/common.blocks/product/product.example.json">
+            style="min-width: 480px; min-height: 350px;"
+            class="ace-sample-frame"
+            data-src="common.blocks/menu/menu.data.sample.json">
     </div>
-    <a href="https://rawgit.com/bem-under-sailsjs/barbershop-bem-sails/feature/code-style-presentation/frontend/common.blocks/product/product.example.json">product.example.json</a>
-</section>
 
-
-<section class="slide">
-    <h2 class="shout shrink">Двухпроходная шаблонизация</h2>
-</section>
-
-<section class="slide">
-    <h2>Сергей Бережной: "Экзотическая шаблонизация, или как писать HTML для блоков"</h2>
-    <p><a href="http://www.slideshare.net/yandex/riga-apr-berezhnoibemhtml">slideshare/riga-apr-berezhnoibemhtml</a></p>
-</section>
-
-<section class="slide">
-    <h2 class="shout shrink">Если кратко?</h2>
 </section>
 
 <!-- 2) BEM: DATA => BEMJSON => HTML -->
 <section class="slide">
     <h2 class="shout shrink" style="font-size: 120px;">DATA <br> => <br> BEMJSON <br> => <br> HTML</h2>
+</section>
+
+<!-- 2) BEM: DATA => BEMJSON -->
+<section class="slide">
+    <h2 class="shout shrink">DATA => BEMJSON</h2>
 </section>
 
 <!-- 2) BEM: DATA + BEMTREE => BEMJSON -->
@@ -248,24 +357,23 @@
 </section>
 
 <!-- 2) BEM: https://events.yandex.ru/lib/talks/1354/ -->
-<section class="slide">
-    <h2>Сергей Максимов: BEMTREE — генерируй дерево</h2>
+<section class="slide slideshare">
+
+    <iframe src="//www.slideshare.net/slideshow/embed_code/key/DOzSZKLDsxlSfw" width="700" height="500"
+            frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
+            style="border:1px solid #CCC; max-width: 100%;"
+            allowfullscreen></iframe>
+
     <p>
-        <a href="https://events.yandex.ru/lib/talks/1354/">events.yandex.ru/lib/talks/1354/</a>
+        <a href="https://events.yandex.ru/lib/talks/1354/">https://events.yandex.ru/lib/talks/1354/</a>
     </p>
-    <p><a href="http://www.slideshare.net/yandex/bemtree">slideshare/bemtree</a></p>
 
-</section>
-
-
-<section class="slide">
-    <h2 class="shout shrink">Если кратко?</h2>
 </section>
 
 
 <!-- BEMTREE usage  -->
 <section class="slide ace ace_screen_full">
-    <h2>BEMTREE</h2>
+    <h2>BEMTREE usage</h2>
     <div
             class="ace-sample-frame ace-sample-frame_screen_full"
             data-src="examples/bemtree/usage.js">
@@ -273,161 +381,74 @@
 </section>
 
 
-<section class="slide">
-    <h2 class="shout shrink">А у нас?</h2>
-</section>
-
-<section class="slide">
-    <img src="img/barbershop/product-blocks.png"
-         class="cover"
-         alt="current footer">
-</section>
-
 <section class="slide ace ace_screen_full">
-    <div
-            class="ace-sample-frame ace-sample-frame_screen_full"
-            data-fontsize="26"
-            data-src="https://rawgit.com/bem-under-sailsjs/barbershop-bem-sails/feature/code-style-presentation/frontend/common.blocks/product/product.example.json">
-    </div>
-    <a href="https://rawgit.com/bem-under-sailsjs/barbershop-bem-sails/feature/code-style-presentation/frontend/common.blocks/product/product.example.json">product.example.json</a>
-</section>
 
+    <table class="no-border">
+        <tr>
+            <th>JSON</th>
+            <th>BEMTREE</th>
+        </tr>
+        <tr>
+            <td>
+                <div
+                        style="height: 300px; width: 400px;"
+                        class="ace-sample-frame"
+                        data-src="common.blocks/menu/menu.data.sample.json">
+                </div>
+            </td>
+            <td style="vertical-align: top;">
+                <div
+                        style="height: 300px; width: 600px;"
+                        class="ace-sample-frame"
+                        data-src="common.blocks/menu/menu.bemtree.js">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>BEMHTML</th>
+            <th>HTML</th>
+        </tr>
 
-<section class="slide ace ace_screen_full">
-    <div
-            class="ace-sample-frame ace-sample-frame_screen_full"
-            data-src="https://raw.githubusercontent.com/bem-under-sailsjs/barbershop-bem-sails/feature/code-style-presentation/frontend/common.blocks/product/product.bemtree">
-    </div>
-    <a href="https://raw.githubusercontent.com/bem-under-sailsjs/barbershop-bem-sails/feature/code-style-presentation/frontend/common.blocks/product/product.bemtree">product.bemtree</a>
-</section>
+        <tr>
+            <td>
+                <div
+                        style="height: 200px; width: 400px;"
+                        class="ace-sample-frame"
+                        data-src="common.blocks/menu/menu.bemhtml.js">
+                </div>
+            </td>
+            <td>
+                <div
+                        style="height: 200px;width: 600px;"
+                        class="ace-sample-frame"
+                        data-src="common.blocks/menu/menu.sample.html">
+                </div>
 
-
-<section class="slide">
-    <h2 class="shout shrink">Что получили?</h2>
-</section>
-
-
-<section class="slide ace ace_screen_full">
-    <div
-            class="ace-sample-frame ace-sample-frame_screen_full"
-            data-fontsize="26"
-            data-src="https://rawgit.com/bem-under-sailsjs/barbershop-bem-sails/feature/code-style-presentation/frontend/common.blocks/product/product.example.json">
-    </div>
-    <a href="https://rawgit.com/bem-under-sailsjs/barbershop-bem-sails/feature/code-style-presentation/frontend/common.blocks/product/product.example.json">product.example.json</a>
-</section>
-
-
-<section class="slide">
-    <h2 class="shout shrink">JSON превращается...</h2>
-</section>
-
-<section class="slide">
-    <img src="img/tree.jpg"
-         class="cover"
-         alt="current footer">
-</section>
-
-
-<section class="slide">
-    <h2 class="shout shrink">JSON превращается в BEMSON</h2>
-</section>
-
-
-<section class="slide ace ace_screen_full">
-    <div
-            class="ace-sample-frame ace-sample-frame_screen_full"
-            data-fontsize="20"
-            data-src="https://rawgit.com/bem-under-sailsjs/barbershop-bem-sails/feature/code-style-presentation/frontend/common.blocks/product/product.example.bemjson.js">
-    </div>
-    <a href="https://raw.githubusercontent.com/bem-under-sailsjs/barbershop-bem-sails/feature/code-style-presentation/frontend/common.blocks/product/product.example.bemjson.js">product.example.bemjson.js</a>
+            </td>
+        </tr>
+    </table>
 </section>
 
 
 <section class="slide">
-    <h2 class="shout">Знаем, что показать</h2>
+
+    <h2 class="shout shrink">Двупроходная шаблонизация</h2>
+
+</section>
+
+
+<section class="slide slideshare">
+    <iframe src="//www.slideshare.net/slideshow/embed_code/key/iwFVZpZkcKvDKE" width="700" height="500"
+            frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
+            style="border:1px solid #CCC;"
+            allowfullscreen></iframe>
 </section>
 
 
 <section class="slide">
-    <h2 class="shout">Но как показать, пока нет</h2>
-</section>
 
-
-<section class="slide">
-    <h2 class="shout">BEMHTML</h2>
-</section>
-
-<section class="slide">
-    <img src="img/barbershop/product-blocks.png"
-         class="cover"
-         alt="current footer">
-</section>
-
-
-<section class="slide">
-    <h2 class="shout">image</h2>
-</section>
-
-
-<section class="slide ace ace_screen_full">
-    <div
-            class="ace-sample-frame ace-sample-frame_screen_full"
-            data-fontsize="20"
-            data-src="https://raw.githubusercontent.com/bem/bem-components/v2/common.blocks/image/image.bemhtml">
-    </div>
-    <a href="https://raw.githubusercontent.com/bem/bem-components/v2/common.blocks/image/image.bemhtml">bem-components/image.bemhtml</a>
-</section>
-
-
-<section class="slide">
-    <h2 class="shout">HTML?</h2>
-</section>
-
-
-<section class="slide">
-    <img
-            class="cover"
-            src="img/assembler.png"
-            alt="assembler">
-</section>
-
-
-<section class="slide ace ace_screen_full">
-    <div
-            class="ace-sample-frame ace-sample-frame_screen_full"
-            data-fontsize="20"
-            data-src="https://raw.githubusercontent.com/bem-under-sailsjs/barbershop-bem-sails/feature/code-style-presentation/frontend/common.blocks/product/__image/product__image.html">
-    </div>
-    <a href="https://raw.githubusercontent.com/bem-under-sailsjs/barbershop-bem-sails/feature/code-style-presentation/frontend/common.blocks/product/__image/product__image.html">product__image.html</a>
-</section>
-
-<section class="slide">
-    <img src="img/barbershop/barbershop-product-card-image.png"
-         class="cover"
-         alt="current footer">
-</section>
-
-
-<section class="slide">
-    <img
-            class="cover"
-            src="img/matrix-doors.jpg"
-            alt="assembler">
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-<section class="slide">
     <h2 class="shout shrink">client</h2>
+
 </section>
 
 
@@ -453,7 +474,7 @@
 
 <section class="slide">
     <h2 class="shout shrink">
-        i-bem.js
+        i-bem js
     </h2>
 </section>
 
@@ -493,12 +514,12 @@
 </section>
 
 
-<section class="slide">
-    <h2>Сергей Бережной: "Клиентский JavaScript в БЭМ-терминах: от блока до библиотеки"</h2>
-
-    <p>
-        <a href="http://www.slideshare.net/yandex/riga-apr-berezhnoiibemjs">slideshare/riga-apr-berezhnoiibemjs</a>
-    </p>
+<section class="slide slideshare">
+    <iframe src="//www.slideshare.net/slideshow/embed_code/key/8ToZr8HQgRTD0s" width="700" height="550"
+            frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
+            style="border:1px solid #CCC; max-width: 100%;"
+            allowfullscreen>
+    </iframe>
 </section>
 
 <section class="slide">
@@ -553,10 +574,9 @@
     </ul>
 </section>
 
-<section class="slide">
-    <h2>Библиотека bem-components — Ангелина Сидорцова</h2>
-    <p><a href="https://www.youtube.com/watch?v=Wtvlth-mG7U">youtube</a></p>
-    <img src="img/previews/bem-components-youtube.png" alt="" width="80%">
+<section class="slide slideshare">
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/Wtvlth-mG7U?rel=0" frameborder="0"
+            allowfullscreen></iframe>
 </section>
 
 <section class="slide">
@@ -644,7 +664,7 @@
     <div></div>
 </div>
 
-<script src="shower/shower.min.js"></script>
+<script src="node_modules/shower-core/shower.min.js"></script>
 
 <script src="examples/bemhtml/bare.bemhtml.js"></script>
 <script src="js/ace-sample-frame.js"></script>

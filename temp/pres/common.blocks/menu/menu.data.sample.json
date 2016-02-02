@@ -1,0 +1,29 @@
+{
+  "data": {
+    "menu": {
+      "title": "Обучение",
+      "items": [
+        {
+          "url": "/learn_map",
+          "title": "Карта обучения"
+        },
+        {
+          "url": "/courses",
+          "title": "Онлайн-курсы"
+        },
+        {
+          "url": "/intensive",
+          "title": "Интенсив"
+        },
+        {
+          "url": "/pricing",
+          "title": "Подписка"
+        },
+        {
+          "url": "/rating",
+          "title": "Рейтинг"
+        }
+      ]
+    }
+  }
+}
