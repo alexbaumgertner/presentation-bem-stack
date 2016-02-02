@@ -39,6 +39,7 @@
 
       var
         src      = sampleNode.dataset.src,
+        fontSize = parseInt(sampleNode.dataset.fontsize, 10) || 24,
         lang     = sampleNode.dataset.lang,
         fileType = src.split('.').pop(),
         editor   = ace.edit(sampleNode);
@@ -57,7 +58,9 @@
         editor.getSession().setValue(code);
         editor.getSession().setMode('ace/mode/' + fileType);
 
-        editor.setFontSize(24);
+        console.log("fontSize: ", fontSize);
+
+        editor.setFontSize(fontSize);
 
         sampleNode.aceEditor = editor;
         promiseResolver({ editor: editor, code: code });
@@ -110,15 +113,6 @@
   }
 
 
-  aceEditorsLoader.then(function(result) {
-    var doc = global.document;
-
-    var BEMHTML = global['BEMHTML_BARE'];
-    var bemjsonNode = doc.getElementById('logo-example-bemjson');
-    var bemhtmlNode = doc.getElementById('logo-bemhtml');
-    var htmlNode = doc.getElementById('logo-sample-html');
-
-    console.log("bemjsonNode.aceInit: ", bemjsonNode.aceEditor);
-  });
+  aceEditorsLoader.then(function(result) {});
 
 }(window));
