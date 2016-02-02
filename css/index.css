@@ -57,6 +57,14 @@
     margin-bottom: 10px;
 }
 
+.ace_screen_full a
+{
+    bottom: 10px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
 .sample-frame__viewport {
     /* overflow-y: auto;*/
 }
