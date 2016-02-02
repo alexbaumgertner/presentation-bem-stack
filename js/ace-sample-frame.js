@@ -61,6 +61,8 @@
           editor.getSession().setValue(code);
           editor.getSession().setMode('ace/mode/' + fileType);
 
+          editor.setFontSize(24);
+
           sampleNode.aceEditor = editor;
           promiseResolver({ editor: editor, code: code });
         });
