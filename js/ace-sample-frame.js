@@ -7,15 +7,11 @@
     'noconflict/mode-json.js)';
 
   var aceEditorsLoader = new Promise(function(resolve, reject) {
-    loader(global.document, aceSrc)
-      .then(aceEditorsInit)
-      .then(function(aceEditorsPromises) {
-        Promise
-          .all(aceEditorsPromises)
-          .then(function(result) {
-            resolve(result);
-          });
+    loader(global.document, aceSrc).then(aceEditorsInit).then(function(aceEditorsPromises) {
+      Promise.all(aceEditorsPromises).then(function(result) {
+        resolve(result);
       });
+    });
   });
 
   /**
@@ -25,9 +21,10 @@
    */
   function aceEditorsInit() {
 
-    var sampleNodes = global.document.querySelectorAll('.ace-sample-frame'),
-      samplePromises = [],
-      forEach = global.Array.prototype.forEach;
+    var javascriptFormats      = ['bemtree', 'bemhtml', 'js'],
+        sampleNodes    = global.document.querySelectorAll('.ace-sample-frame'),
+        samplePromises = [],
+        forEach        = global.Array.prototype.forEach;
 
     // TODO: try http://prismjs.com/plugins/line-numbers/
 
@@ -41,31 +38,30 @@
       samplePromises.push(promise);
 
       var
-        src = sampleNode.dataset.src,
-        lang = sampleNode.dataset.lang,
+        src      = sampleNode.dataset.src,
+        lang     = sampleNode.dataset.lang,
         fileType = src.split('.').pop(),
-        editor = ace.edit(sampleNode);
+        editor   = ace.edit(sampleNode);
 
       // fix deprecated
       editor.$blockScrolling = Infinity;
 
-      if (fileType === 'js') {
+
+      if (javascriptFormats.indexOf(fileType) > -1) {
         fileType = 'javascript';
       }
 
-      fetch(sampleNode.dataset.src)
-        .then(function(response) {
-          return response.text()
-        })
-        .then(function(code) {
-          editor.getSession().setValue(code);
-          editor.getSession().setMode('ace/mode/' + fileType);
+      fetch(sampleNode.dataset.src).then(function(response) {
+        return response.text()
+      }).then(function(code) {
+        editor.getSession().setValue(code);
+        editor.getSession().setMode('ace/mode/' + fileType);
 
-          editor.setFontSize(24);
+        editor.setFontSize(24);
 
-          sampleNode.aceEditor = editor;
-          promiseResolver({ editor: editor, code: code });
-        });
+        sampleNode.aceEditor = editor;
+        promiseResolver({ editor: editor, code: code });
+      });
     });
 
     return samplePromises;
@@ -114,16 +110,15 @@
   }
 
 
-  aceEditorsLoader
-    .then(function(result) {
-      var doc = global.document;
+  aceEditorsLoader.then(function(result) {
+    var doc = global.document;
 
-      var BEMHTML = global['BEMHTML_BARE'];
-      var bemjsonNode = doc.getElementById('logo-example-bemjson');
-      var bemhtmlNode = doc.getElementById('logo-bemhtml');
-      var htmlNode = doc.getElementById('logo-sample-html');
+    var BEMHTML = global['BEMHTML_BARE'];
+    var bemjsonNode = doc.getElementById('logo-example-bemjson');
+    var bemhtmlNode = doc.getElementById('logo-bemhtml');
+    var htmlNode = doc.getElementById('logo-sample-html');
 
-      console.log("bemjsonNode.aceInit: ", bemjsonNode.aceEditor);
-    });
+    console.log("bemjsonNode.aceInit: ", bemjsonNode.aceEditor);
+  });
 
 }(window));
