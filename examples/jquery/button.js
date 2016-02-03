@@ -1,15 +1,7 @@
+var $product = $('.product');
 
+$product.on('click', '.button', function(e) {
+  console.log("this: ", this);
 
-if ($('.button').length > 0) {
-
-  $('.button').on('click', function() {
-
-    $(this)
-      .parent('.popup')
-      .removeClass('.popup_open');
-
-    $('.some-value').text($(this).text());
-
-  });
-
-}
+  $.ajax({});
+});
