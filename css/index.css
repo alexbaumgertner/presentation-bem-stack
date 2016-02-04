@@ -79,6 +79,9 @@
     position: absolute;
     text-align: center;
     width: 100%;
+    background: #fff;
+    display: inline-block;
+    z-index: 1;
 }
 
 .sample-frame__viewport {
